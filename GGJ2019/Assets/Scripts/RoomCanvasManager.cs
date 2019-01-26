@@ -22,7 +22,7 @@ public class RoomCanvasManager : MonoBehaviour
 
     }
 
-    public void ShowRoom(string roomName, string[] actions){
+    public void ShowRoom(string roomName, string[] actions, BackgroundManager.RoomNames roomType){
 
         for(int i = 0; i < actions.Length; i++){
 
@@ -33,6 +33,7 @@ public class RoomCanvasManager : MonoBehaviour
 
         }
 
+        BackgroundManager.instance.ShowRoomBackground(roomType);
         HouseManager.instance.HideHouse();
         RoomNameText.text = roomName;
         roomCanvas.interactable = true;
@@ -45,6 +46,7 @@ public class RoomCanvasManager : MonoBehaviour
         roomCanvas.interactable = false;
         roomCanvas.blocksRaycasts = false;
         roomCanvas.alpha = 0;
+        BackgroundManager.instance.HideRoomBackgrounds();
         for(int i = 0; i < roomButtons.Length; i++){
 
 

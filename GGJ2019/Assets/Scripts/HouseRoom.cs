@@ -9,12 +9,14 @@ public class HouseRoom : MonoBehaviour
    FamilyMember[] charactersInRoom;
    public string roomSceneName;
    public string[] roomActions;
+   public BackgroundManager.RoomNames roomType;
 
    private void Awake() {
        GetComponent<Button>().onClick.AddListener(ButtonAction);
    }
 
    public void ButtonAction(){
-       RoomCanvasManager.instance.ShowRoom(roomSceneName, roomActions);
+       RoomCanvasManager.instance.ShowRoom(roomSceneName, roomActions, roomType);
+
    }
 }
