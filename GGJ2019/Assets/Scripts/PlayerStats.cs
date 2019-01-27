@@ -17,12 +17,12 @@ public class PlayerStats : MonoBehaviour
 
     private void Start() {
         stats = GetComponentsInChildren<Slider>();
-        ChangePlayerStats(mood, charisma, knowledge, energy);
+        ChangePlayerStats( PlayerStatsManager.instance.mood, PlayerStatsManager.instance.energy);
         canvasGroup = GetComponent<CanvasGroup>();
         canvasGroup.alpha = 0;
     }
 
-    public void ChangePlayerStats(float mood, float charisma, float knowledge, float energy) {
+    public void ChangePlayerStats(float mood, float energy) {
         foreach (var stat in stats) {
 
             if (stat.name == "Mood") {
@@ -46,7 +46,7 @@ public class PlayerStats : MonoBehaviour
     }
 
     private void Update() {
-        ChangePlayerStats(mood, charisma, knowledge, energy);
+        ChangePlayerStats(PlayerStatsManager.instance.mood,  PlayerStatsManager.instance.energy);
     }
 
     public void ShowPlayerStats() {
