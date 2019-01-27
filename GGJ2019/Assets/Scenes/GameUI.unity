@@ -921,10 +921,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac022d54afdd9a34a87caa6ba96e0903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mood: 80
-  charisma: 90
-  knowledge: 80
-  energy: 95
 --- !u!225 &109136725
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2042,10 +2038,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea70776d51e89c04284aa4a03c126651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: 
-  mood: 73
-  loyalty: 50
-  relationship: 4
 --- !u!1 &316700757
 GameObject:
   m_ObjectHideFlags: 0
@@ -3450,7 +3442,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac022d54afdd9a34a87caa6ba96e0903, type: 3}
+  m_Script: {fileID: 11500000, guid: b5247f146da130e418938c5104c26798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mood: 0
@@ -4758,10 +4750,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea70776d51e89c04284aa4a03c126651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: 
-  mood: 89
-  loyalty: 91
-  relationship: 15
 --- !u!1 &706069279
 GameObject:
   m_ObjectHideFlags: 0
@@ -5275,10 +5263,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea70776d51e89c04284aa4a03c126651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: 
-  mood: 100
-  loyalty: 100
-  relationship: 87
 --- !u!1 &825495398
 GameObject:
   m_ObjectHideFlags: 0
@@ -7450,10 +7434,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea70776d51e89c04284aa4a03c126651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: 
-  mood: 24
-  loyalty: 72
-  relationship: 73
 --- !u!1 &1201685600
 GameObject:
   m_ObjectHideFlags: 0
