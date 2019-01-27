@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class MajorEventsList : MonoBehaviour
 {
-    
-    public static string[] majorEventNames;
+    public static MajorEventsList instance;
+    public string[] majorEventNames;
+
+    private void Awake() {
+        if(instance != null){
+            Destroy(this);
+        }
+        instance = this;
+    }
+   
 }
