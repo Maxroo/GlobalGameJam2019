@@ -73,6 +73,8 @@ public class EventAction : ScriptableObject
     public int familyStatAmount;
     public int playerStatAmount;
 
+    public bool loadEndingScene;
+
     public BackgroundManager.RoomNames backgroundToLoad;
 
     public bool changeMusic;

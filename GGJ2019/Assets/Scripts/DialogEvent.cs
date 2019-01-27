@@ -123,9 +123,10 @@ public class DialogEvent : MonoBehaviour
 
         }
 
-        if(currentAction.insertEndingScene.Length >1){
-            
+        if(currentAction.insertEndingScene != null && currentAction.loadEndingScene){
+    
             SceneManager.LoadScene(currentAction.insertEndingScene);
+    
         }
         
 
@@ -222,6 +223,7 @@ public class DialogEvent : MonoBehaviour
         NextAction(0);
         if(eventArray[0].backgroundToLoad != BackgroundManager.RoomNames.NONE){
             BackgroundManager.instance.ShowRoomBackground(eventArray[0].backgroundToLoad);
+            HouseManager.instance.HideHouse();
         }
 
     }
