@@ -102,6 +102,7 @@ public class DialogEvent : MonoBehaviour
         }
 
         if(currentAction.familyStat != EventAction.FamilyStatToModify.NONE){
+            ModifyFamilyStats(currentAction.familyStat, currentAction.familyStatAmount, currentAction.familyMemberToAffect);
 
         }
             
@@ -152,6 +153,10 @@ public class DialogEvent : MonoBehaviour
 
            case DialogCanvasManager.CharactersToShow.BROTHER:
            nameString = "brother";
+           break;
+
+           case DialogCanvasManager.CharactersToShow.ALL:
+            nameString = "all";
            break;
         }
 

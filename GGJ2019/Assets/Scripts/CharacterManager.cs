@@ -40,7 +40,16 @@ public class CharacterManager : MonoBehaviour
             break;
         }
 
-        currentCharacter.mood += amountChanged;
+        if(currentCharacter != null){
+            currentCharacter.mood += amountChanged;
+        } else
+        {
+            mother.mood += amountChanged;
+            father.mood += amountChanged;
+            sister.mood += amountChanged;
+            brother.mood += amountChanged;
+            
+        }
     }
 
     public void changeLoyalty(int amountChanged, string characterToChange){
@@ -65,7 +74,16 @@ public class CharacterManager : MonoBehaviour
             break;
         }
 
-        currentCharacter.loyalty += amountChanged;
+        if(currentCharacter != null){
+            currentCharacter.loyalty += amountChanged;
+        } else
+        {
+            mother.loyalty += amountChanged;
+            father.loyalty += amountChanged;
+            sister.loyalty += amountChanged;
+            brother.loyalty += amountChanged;
+            
+        }
     }
 
     public void changeRelationship(int amountChanged, string characterToChange){
@@ -90,7 +108,14 @@ public class CharacterManager : MonoBehaviour
             break;
         }
 
-        currentCharacter.relationship += amountChanged;
+        if(currentCharacter != null){
+            currentCharacter.relationship += amountChanged;
+        } else {
+            mother.relationship += amountChanged;
+            father.relationship += amountChanged;
+            sister.relationship += amountChanged;
+            brother.relationship += amountChanged;     
+        }
 
     }
 
