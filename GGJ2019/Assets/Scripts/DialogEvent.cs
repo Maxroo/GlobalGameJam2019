@@ -117,6 +117,11 @@ public class DialogEvent : MonoBehaviour
             
 
         }
+
+        if(currentAction.insertEndingScene.Length >1){
+            
+            SceneManager.LoadScene(currentAction.insertEndingScene);
+        }
         
 
     }

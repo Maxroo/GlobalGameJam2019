@@ -34,7 +34,10 @@ public class EventAction : ScriptableObject
         Anytime
 
     }
+
     
+
+
     public TimeRequirement timeRequirement = TimeRequirement.Anytime;
     public DialogCanvasManager.CharactersToShow LeftCharacter;
     public DialogCanvasManager.CharactersToShow RightCharacter;
@@ -62,7 +65,7 @@ public class EventAction : ScriptableObject
     public int familyStatAmount;
     public int playerStatAmount;
 
-  
+    public string insertEndingScene;
 
 
     public static void CreateMyAsset()
