@@ -27,5 +27,6 @@ MonoBehaviour:
   familyMemberToAffect: 6
   playerStat: 0
   isEnd: 1
+  moveTime: 1
   familyStatAmount: 2
   playerStatAmount: 0

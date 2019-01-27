@@ -20,7 +20,7 @@ MonoBehaviour:
   choice1Text: Stay and just go with it
   choice2Text: Ask to be excused from the table
   firstButtonTargetEvent: 4
-  secondButtonTargetEvent: 0
+  secondButtonTargetEvent: 7
   showLeftName: 0
   showRightName: 0
   familyStat: 0

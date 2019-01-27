@@ -22,7 +22,7 @@ MonoBehaviour:
   firstButtonTargetEvent: 0
   secondButtonTargetEvent: 0
   showLeftName: 0
-  showRightName: 1
+  showRightName: 0
   familyStat: 0
   familyMemberToAffect: 0
   playerStat: 0

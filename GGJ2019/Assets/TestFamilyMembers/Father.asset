@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d60775d4822c8849aca8a5186c73d23, type: 3}
   m_Name: Father
   m_EditorClassIdentifier: 
+  charName: Father
   mood: 0
   loyalty: 0
   relationship: 0
+  currentRoom: 0
