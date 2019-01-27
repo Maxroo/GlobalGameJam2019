@@ -15,7 +15,7 @@ MonoBehaviour:
   timeRequirement: 4
   LeftCharacter: 0
   RightCharacter: 0
-  dialogText: 'Few Days later, your whole family is acting like "Your sister" now... '
+  dialogText: 'You did some speech and throwed some policies. '
   showChoices: 0
   choice1Text: 
   choice2Text: 
