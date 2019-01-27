@@ -14,6 +14,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip intenseMusic;
 
     public AudioClip clickingSFX;
+    public AudioClip positiveSFX;
+    public AudioClip negativeSFX;
+
     
     public AudioSource audioSourceRef;
     public AudioSource audioSFXRef;
@@ -68,6 +71,15 @@ public class AudioManager : MonoBehaviour
    public void PlayClickSoundEffect(){      
        if(!audioSFXRef.isPlaying){
         audioSFXRef.PlayOneShot(clickingSFX);
+       }
+   }
+    public void PlayPositiveSoundEffect(){      
+       if(!audioSFXRef.isPlaying){
+        audioSFXRef.PlayOneShot(positiveSFX);
+       }
+   } public void PlayNegativeSoundEffect(){      
+       if(!audioSFXRef.isPlaying){
+        audioSFXRef.PlayOneShot(negativeSFX);
        }
    }
 }
