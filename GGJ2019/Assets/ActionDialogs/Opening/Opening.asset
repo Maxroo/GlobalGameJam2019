@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8df188f6938ca44ea3acf9d9c1b4243, type: 3}
-  m_Name: Argument 3
+  m_Name: Opening
   m_EditorClassIdentifier: 
   timeRequirement: 4
   LeftCharacter: 0
   RightCharacter: 0
-  dialogText: Oh no, you know where this is going. What do you do?
-  showChoices: 1
-  choice1Text: Stay and just go with it
-  choice2Text: Ask to be excused from the table
-  firstButtonTargetEvent: 4
-  secondButtonTargetEvent: 7
+  dialogText: Thanksgiving weeked, a time to forget about personal problems and enjoy
+    time with family
+  showChoices: 0
+  choice1Text: 
+  choice2Text: 
+  firstButtonTargetEvent: 0
+  secondButtonTargetEvent: 0
   showLeftName: 0
   showRightName: 0
   familyStat: 0

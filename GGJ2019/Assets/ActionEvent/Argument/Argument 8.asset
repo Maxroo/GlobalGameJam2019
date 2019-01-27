@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8df188f6938ca44ea3acf9d9c1b4243, type: 3}
-  m_Name: Argument 3
+  m_Name: Argument 8
   m_EditorClassIdentifier: 
   timeRequirement: 4
   LeftCharacter: 0
   RightCharacter: 0
-  dialogText: Oh no, you know where this is going. What do you do?
-  showChoices: 1
-  choice1Text: Stay and just go with it
-  choice2Text: Ask to be excused from the table
-  firstButtonTargetEvent: 4
-  secondButtonTargetEvent: 7
+  dialogText: Altough now everybody things you are a dick for leaving. All -5 loyalty
+  showChoices: 0
+  choice1Text: 
+  choice2Text: 
+  firstButtonTargetEvent: 0
+  secondButtonTargetEvent: 0
   showLeftName: 0
   showRightName: 0
-  familyStat: 0
-  familyMemberToAffect: 0
+  familyStat: 2
+  familyMemberToAffect: 6
   playerStat: 0
-  isEnd: 0
-  familyStatAmount: 0
+  isEnd: 1
+  familyStatAmount: -5
   playerStatAmount: 0
