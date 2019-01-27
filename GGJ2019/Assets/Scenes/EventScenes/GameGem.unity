@@ -547,6 +547,7 @@ GameObject:
   - component: {fileID: 840700412}
   - component: {fileID: 840700416}
   - component: {fileID: 840700417}
+  - component: {fileID: 840700418}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -683,12 +684,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventArray:
-  - {fileID: 11400000, guid: f77e0db672daf5142b9f9c670d87f267, type: 2}
-  - {fileID: 11400000, guid: da7a423eb63360041a00dc4db946f931, type: 2}
-  - {fileID: 11400000, guid: 9b54a9a1d46f3414ba0d6ed96721fb9f, type: 2}
-  - {fileID: 11400000, guid: b8821cfb24648e246a1ff74a5da796a7, type: 2}
-  - {fileID: 11400000, guid: 883a31087ca89534d8efacf48b26fcd6, type: 2}
-  - {fileID: 11400000, guid: 5170309b93bc1ad478162ff658b5d08f, type: 2}
+  - {fileID: 11400000, guid: 8b338ffad2979744f80c6589ffa698c8, type: 2}
+  - {fileID: 11400000, guid: af931f238f152a24cb76ab2f27822966, type: 2}
+  - {fileID: 11400000, guid: 73dc1878d3394424e95ce2bbe06ee546, type: 2}
+  - {fileID: 11400000, guid: aae46e4a50be80c419c75146174879b8, type: 2}
+  - {fileID: 11400000, guid: 7eb553c80f703fb479dd086816f190fc, type: 2}
+  - {fileID: 11400000, guid: 07f4e381d18bf9244a26ee3d9fc6e125, type: 2}
+  - {fileID: 11400000, guid: a3d0fe924e19dc3459c341db0202295e, type: 2}
+  - {fileID: 11400000, guid: 037074c0d433fd04188ebf6cd8f5764b, type: 2}
+  - {fileID: 11400000, guid: a8d1853266ae0de43beabf400bb17760, type: 2}
+--- !u!114 &840700418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840700411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac022d54afdd9a34a87caa6ba96e0903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mood: 0
+  charisma: 0
+  knowledge: 0
+  energy: 0
 --- !u!1 &944541383
 GameObject:
   m_ObjectHideFlags: 0

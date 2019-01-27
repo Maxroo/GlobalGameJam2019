@@ -10,22 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8df188f6938ca44ea3acf9d9c1b4243, type: 3}
-  m_Name: Dialog 1
+  m_Name: Dialog 8
   m_EditorClassIdentifier: 
   timeRequirement: 4
   LeftCharacter: 0
   RightCharacter: 0
-  dialogText: You wake up, and follow the sound to find your dog
+  dialogText: The FPS game you made is about killing zombies, that makes everyone
+    feel home. Mood +10;
   showChoices: 0
   choice1Text: 
   choice2Text: 
-  firstButtonTargetEvent: 2
-  secondButtonTargetEvent: 3
+  firstButtonTargetEvent: 3
+  secondButtonTargetEvent: 0
   showLeftName: 0
   showRightName: 0
-  familyStat: 0
-  familyMemberToAffect: 0
+  familyStat: 1
+  familyMemberToAffect: 4
   playerStat: 0
-  isEnd: 0
-  familyStatAmount: 0
+  isEnd: 1
+  familyStatAmount: -10
   playerStatAmount: 0

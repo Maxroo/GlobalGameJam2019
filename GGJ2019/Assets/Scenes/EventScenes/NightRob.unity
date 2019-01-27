@@ -547,6 +547,7 @@ GameObject:
   - component: {fileID: 840700412}
   - component: {fileID: 840700416}
   - component: {fileID: 840700417}
+  - component: {fileID: 840700418}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -684,8 +685,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventArray:
   - {fileID: 11400000, guid: f0c00c859517842409e0fe388afdc152, type: 2}
+  - {fileID: 11400000, guid: 9839d0ba6b156ae4fbacbc28785ac0d7, type: 2}
   - {fileID: 11400000, guid: 484bad5686407b04ebac6fc914e570ec, type: 2}
+  - {fileID: 11400000, guid: b7f1a358122b05a42bfed66212cb746d, type: 2}
   - {fileID: 11400000, guid: 0235db207509b30439b4a859234ba968, type: 2}
+  - {fileID: 11400000, guid: d5df2361588291446a47ed48c1e614fe, type: 2}
+--- !u!114 &840700418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840700411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac022d54afdd9a34a87caa6ba96e0903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mood: 0
+  charisma: 0
+  knowledge: 0
+  energy: 0
 --- !u!1 &944541383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1630,7 +1650,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: d090504023f7cdf46887b952d18ec987, type: 3}
     m_FontSize: 22
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
@@ -1709,7 +1729,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: d090504023f7cdf46887b952d18ec987, type: 3}
     m_FontSize: 22
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
