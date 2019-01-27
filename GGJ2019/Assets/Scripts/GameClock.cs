@@ -33,6 +33,9 @@ public class GameClock : MonoBehaviour
 	private int currentTimeBlock = 0;
 	private int currentTime = 8;
 
+    public delegate void ClockChanged();
+    public static event ClockChanged OnClockChange;
+
     public TimeOfDay CurrentTimeOfDay
     {
         get
