@@ -15,7 +15,7 @@ public class EventAction : ScriptableObject
 
     }
 
-     public enum PlayerStatToModify{
+    public enum PlayerStatToModify{
 
         NONE,
         MOOD,
@@ -40,10 +40,13 @@ public class EventAction : ScriptableObject
     public bool showRightName;
 
     public FamilyStatToModify familyStat = FamilyStatToModify.NONE;
+    public DialogCanvasManager.CharactersToShow familyMemberToAffect;
     public PlayerStatToModify playerStat = PlayerStatToModify.NONE;
 
-    public int playerStatAmount;
+    bool isEnd;
+
     public int familyStatAmount;
+    public int playerStatAmount;
 
 
     public static void CreateMyAsset()

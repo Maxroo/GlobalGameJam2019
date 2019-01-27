@@ -8,12 +8,13 @@ public class DialogCanvasManager : MonoBehaviour
     public static DialogCanvasManager instance;
 
     public enum CharactersToShow{
+        NONE,
         MOM,
         DAD,
         SISTER,
         BROTHER,
         DOG,
-        NONE
+        ALL
     }
 
     [Header("Buttons")]
@@ -198,7 +199,9 @@ public class DialogCanvasManager : MonoBehaviour
    }
 
    public void HideCharacterLeft(){
-       leftSprite.gameObject.GetComponent<SpriteMovement>().MoveOutLeft();
+       if(leftSprite != null){
+            leftSprite.gameObject.GetComponent<SpriteMovement>().MoveOutLeft();
+       }
 
    }
 
