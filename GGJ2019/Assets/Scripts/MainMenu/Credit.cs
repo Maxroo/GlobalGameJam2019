@@ -4,10 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class MainMenu : MonoBehaviour
+public class Credit : MonoBehaviour
 {
-    
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,16 +15,9 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void onPlayClicked()
-    {
-        SceneManager.LoadScene("OpeningScene");
-    }
-
-    public void onCreditClicked()
-    {
-        SceneManager.LoadScene("Credit");
+        if(Input.GetMouseButtonDown(0))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }
