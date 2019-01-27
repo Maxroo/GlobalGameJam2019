@@ -8,9 +8,9 @@ public class FamilyMember : MonoBehaviour
 
     //Stats
     [SerializeField] string characterName;
-    [Range(0,1)][SerializeField] float mood = 0.9f;
-    [Range(0, 1)] [SerializeField] float loyalty = 1f;
-    [Range(0, 1)] [SerializeField] float relationship = 0.25f;
+    [Range(0, 100)] [SerializeField] int mood = 50;
+    [Range(0, 100)] [SerializeField] int loyalty = 50;
+    [Range(0, 100)] [SerializeField] int relationship = 50;
     private Slider[] stats;
 
     //Status Variables
@@ -20,30 +20,30 @@ public class FamilyMember : MonoBehaviour
 
     private void Start() {
         stats = GetComponentsInChildren<Slider>();
-        ChangeStats(mood, loyalty, relationship);
+        ChangeCHaracterStats(mood, loyalty, relationship);
     }
 
-    public void ChangeStats(float mood, float loyalty, float relationship) {
+    public void ChangeCHaracterStats(float mood, float loyalty, float relationship) {
         foreach (var stat in stats) {
             if (stat.name == "Mood") {
 
-                stat.value = mood;
+                stat.value = mood / 100;
 
             }
             if (stat.name == "Loyalty") {
 
-                stat.value = loyalty;
+                stat.value = loyalty / 100;
 
             }
             if (stat.name == "Relationship") {
 
-                stat.value = relationship;
+                stat.value = relationship / 100;
 
             }
         }
     }
 
     private void Update() {
-        ChangeStats(mood, loyalty, relationship);
+        ChangeCHaracterStats(mood, loyalty, relationship);
     }
 }
