@@ -653,19 +653,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 850b714a543675b428ea039c7b37547c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FirstOption: {fileID: 0}
-  SecondOption: {fileID: 0}
+  firstOption: {fileID: 962805608}
+  secondOption: {fileID: 944541385}
   leftDialogBox: {fileID: 434469510}
   rightDialogBox: {fileID: 1675679000}
   dialogBackground: {fileID: 1158281898}
   leftDialogName: {fileID: 1684811738}
   rightDialogName: {fileID: 1010279655}
   dialogText: {fileID: 487214943}
-  firstButtonText: {fileID: 0}
+  firstButtonText: {fileID: 1871532137}
+  secondButtonText: {fileID: 2135717863}
   momSprite: {fileID: 224820053}
   dadSprite: {fileID: 412411543}
   sisSprite: {fileID: 1451334124}
   broSprite: {fileID: 1603988268}
+  buttonGroup: {fileID: 415110812}
+  isInChoice: 0
+  dialogEventRef: {fileID: 840700417}
 --- !u!114 &840700417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -683,6 +687,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 22a12028842b0154191b64c2b635eeb4, type: 2}
   - {fileID: 11400000, guid: 69f0130773c523447aea0efd7879b1bc, type: 2}
   - {fileID: 11400000, guid: 21d3fc5a41b3c6a40bb10301b776760b, type: 2}
+  - {fileID: 11400000, guid: 63f89194ff03c474d8da66157dade2de, type: 2}
 --- !u!1 &944541383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,7 +1566,7 @@ GameObject:
   - component: {fileID: 1871532138}
   - component: {fileID: 1871532137}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TopButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1640,7 +1645,7 @@ GameObject:
   - component: {fileID: 2135717864}
   - component: {fileID: 2135717863}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SecondButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

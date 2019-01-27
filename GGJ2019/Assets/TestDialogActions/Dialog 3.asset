@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeftCharacter: 5
   RightCharacter: 5
-  dialogText: Now everyone is gone!
+  dialogText: ChoiceTime
   showChoices: 0
-  choice1Text: 
-  coice2Text: 
+  choice1Text: PerilousOption
+  choice2Text: LessPerilous
+  firstButtonTargetEvent: 0
+  secondButtonTargetEvent: 0
+  showLeftName: 0
+  showRightName: 0

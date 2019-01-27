@@ -15,11 +15,12 @@ public class DialogEvent : MonoBehaviour
 
     private int actionNumber = 0;
 
-    public void NextAction(){
+    public void NextAction(int nextAction){
 
         DialogCanvasManager.instance.dialogBackground.gameObject.SetActive(true);
 
-        EventAction currentAction = eventArray[actionNumber];
+        EventAction currentAction = eventArray[nextAction];
+        actionNumber = nextAction;
 
         if(currentAction.LeftCharacter != DialogCanvasManager.CharactersToShow.NONE){
 
@@ -91,15 +92,91 @@ public class DialogEvent : MonoBehaviour
         } else if(spriteOutOnRight && currentAction.showRightName){
             DialogCanvasManager.instance.ShowRightDialogBox(currentAction.RightCharacter);
         }
+
+        if(currentAction.showChoices){
+            DialogCanvasManager.instance.ShowButtonChoices(currentAction.choice1Text, currentAction.choice2Text, currentAction.firstButtonTargetEvent, currentAction.secondButtonTargetEvent);
+        }
+
+        if(currentAction.playerStat != EventAction.PlayerStatToModify.NONE){
+            ModifyPlayerStats(currentAction.playerStat, currentAction.playerStatAmount);
+        }
+
+        if(currentAction.familyStat != EventAction.FamilyStatToModify.NONE){
+
+        }
             
         DialogCanvasManager.instance.ShowEventDialog(currentAction.dialogText);
-        actionNumber++;
+        
+
+    }
+
+    public void ModifyPlayerStats(EventAction.PlayerStatToModify statToModify, int amount){
+
+        switch(statToModify){
+
+            case EventAction.PlayerStatToModify.CHARISMA:
+            PlayerStatsManager.instance.charisma += amount;
+            break;
+
+            case EventAction.PlayerStatToModify.KNOWLEDGE:
+            PlayerStatsManager.instance.knowledge += amount;
+            break;
+
+            case EventAction.PlayerStatToModify.ENERGY:
+            PlayerStatsManager.instance.energy += amount;
+            break;
+
+            case EventAction.PlayerStatToModify.MOOD:
+            PlayerStatsManager.instance.mood += amount;
+            break;
+        }
+
+    }
+
+    public void ModifyFamilyStats(EventAction.FamilyStatToModify statToModify, int amount, DialogCanvasManager.CharactersToShow character){
+
+        string nameString = null;
+
+        switch(character){
+            case DialogCanvasManager.CharactersToShow.MOM:
+           nameString = "mother";
+           break;
+
+           case DialogCanvasManager.CharactersToShow.DAD:
+           nameString = "father";
+           break;
+
+           case DialogCanvasManager.CharactersToShow.SISTER:
+           nameString = "sister";
+           break;
+
+           case DialogCanvasManager.CharactersToShow.BROTHER:
+           nameString = "brother";
+           break;
+        }
+
+        switch(statToModify){
+
+            case EventAction.FamilyStatToModify.MOOD:
+            CharacterManager.instance.changeMood(amount, nameString);
+            break;
+
+            case EventAction.FamilyStatToModify.LOYALTY:
+            CharacterManager.instance.changeLoyalty(amount, nameString);
+            break;
+
+            case EventAction.FamilyStatToModify.RELATIONSHIP:
+            CharacterManager.instance.changeRelationship(amount, nameString);
+            break;
+
+        }
 
     }
 
     private void Update() {
-        if(Input.GetMouseButtonUp(0) && actionNumber < eventArray.Length){
-            NextAction();
+        if(Input.GetMouseButtonUp(0) && actionNumber < eventArray.Length && !DialogCanvasManager.instance.isInChoice){
+            NextAction(actionNumber);
+            actionNumber++;
         }
     }
 
