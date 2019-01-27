@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogEvent : MonoBehaviour
 {
 
     private bool spriteOutOnLeft;
     private bool spriteOutOnRight;
+
+
 
     private DialogCanvasManager.CharactersToShow characterOnRight;
     private DialogCanvasManager.CharactersToShow characterOnLeft;
@@ -107,6 +110,11 @@ public class DialogEvent : MonoBehaviour
         }
             
         DialogCanvasManager.instance.ShowEventDialog(currentAction.dialogText);
+
+        if(currentAction.insertEndingScene.Length >1){
+            
+            SceneManager.LoadScene(currentAction.insertEndingScene);
+        }
         
 
     }

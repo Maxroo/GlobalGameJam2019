@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8df188f6938ca44ea3acf9d9c1b4243, type: 3}
   m_Name: Dialog 1
   m_EditorClassIdentifier: 
-  timeRequirement: 3
+  timeRequirement: 4
   LeftCharacter: 0
   RightCharacter: 0
-  dialogText: You wake up, and follow the sound to find your dog
+  dialogText: It is so tiring to be with ....
   showChoices: 0
   choice1Text: 
   choice2Text: 
-  firstButtonTargetEvent: 2
-  secondButtonTargetEvent: 3
+  firstButtonTargetEvent: 0
+  secondButtonTargetEvent: 0
   showLeftName: 0
   showRightName: 0
   familyStat: 0

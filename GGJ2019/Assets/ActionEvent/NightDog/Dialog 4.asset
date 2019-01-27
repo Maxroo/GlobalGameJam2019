@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8df188f6938ca44ea3acf9d9c1b4243, type: 3}
   m_Name: Dialog 4
   m_EditorClassIdentifier: 
-  timeRequirement: 4
+  timeRequirement: 3
   LeftCharacter: 0
   RightCharacter: 0
   dialogText: You were knocked out by somebody.
