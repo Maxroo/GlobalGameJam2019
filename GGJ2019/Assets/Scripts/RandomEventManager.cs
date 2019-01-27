@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class RandomEventManager : MonoBehaviour
@@ -47,15 +47,8 @@ public class RandomEventManager : MonoBehaviour
             new StatEffect[]{ })
 
     };
-    private RandomEvent[] majorEvents = {
-          new RandomEvent("Argue I", "{0} and {1} had a minor argument.", "{0} and {1} nearly had an argument.", CharacterGroup.Humans, CharacterGroup.Humans, null, null,
-            new Comparison(1, "mood", '<', 0, ConstantsManager.kArgueThreshold),new Comparison(2, "mood", '<', 0, ConstantsManager.kArgueThreshold),
-            new StatEffect[]{new StatEffect(StatEffect.WhoEffect.Char1, "mood",-ConstantsManager.kSmallInterval), new StatEffect(StatEffect.WhoEffect.Char2, "mood", -ConstantsManager.kSmallInterval)},
-            new StatEffect[]{new StatEffect(StatEffect.WhoEffect.Char1, "mood",0), new StatEffect(StatEffect.WhoEffect.Char2, "mood", 0)}),
-            new RandomEvent("Argue I", "{0} and {1} had a minor argument.", "{0} and {1} nearly had an argument.", CharacterGroup.Humans, CharacterGroup.Humans, null, null,
-            new Comparison(1, "mood", '<', 0, ConstantsManager.kArgueThreshold),new Comparison(2, "mood", '<', 0, ConstantsManager.kArgueThreshold),
-            new StatEffect[]{new StatEffect(StatEffect.WhoEffect.Char1, "mood",-ConstantsManager.kSmallInterval), new StatEffect(StatEffect.WhoEffect.Char2, "mood", -ConstantsManager.kSmallInterval)},
-            new StatEffect[]{new StatEffect(StatEffect.WhoEffect.Char1, "mood",0), new StatEffect(StatEffect.WhoEffect.Char2, "mood", 0)}),
+    private string[] majorEvents = {
+        "ArgumentAtTheTable","Date","GameJam","NightRob","PipeBurst","ElectricBill","SisterRobot","PoorSleep"
     };
     // Start is called before the first frame update
     void Awake()
@@ -84,6 +77,11 @@ public class RandomEventManager : MonoBehaviour
     {
         Debug.Log("RunMajorEvent");
         //return runEvent(majorEvents);
+        //choose random major event scene to load additively
+        int rand = Random.Range(0, majorEvents.Length);
+        SceneManager.LoadScene(majorEvents[rand], LoadSceneMode.Additive);
+
+
         return true;
     }
     //----------------------------------------------------------------------------------------------------
