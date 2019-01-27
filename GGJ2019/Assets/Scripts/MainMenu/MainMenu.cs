@@ -22,6 +22,13 @@ public class MainMenu : MonoBehaviour
 
     public void onPlayClicked()
     {
-        SceneManager.LoadScene("GameUI");
+        AudioManager.instance.PlayClickSoundEffect();
+        SceneManager.LoadScene("OpeningScene");
+    }
+
+    public void onCreditClicked()
+    {
+        AudioManager.instance.PlayClickSoundEffect();
+        SceneManager.LoadScene("Credit");
     }
 }

@@ -99,6 +99,8 @@ public class GameClock : MonoBehaviour
         CharacterManager.instance.ShuffleRooms();
         //Update UI
         updateDisplay();
+        BackgroundManager.instance.timeChange(currentTime);
+
         //return if is out of time
         return (currentTime >= (numberOfDays*24));   
     }
@@ -167,6 +169,7 @@ public class GameClock : MonoBehaviour
     }
 
 }
+
 
 
 

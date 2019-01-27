@@ -32,6 +32,6 @@ MonoBehaviour:
   playerStatAmount: 0
   loadEndingScene: 0
   backgroundToLoad: 6
-  changeMusic: 0
-  musicToSet: 0
+  changeMusic: 1
+  musicToSet: 1
   insertEndingScene: 
