@@ -6,12 +6,13 @@ using UnityEditor;
 [CreateAssetMenu(fileName = "Char", menuName = "FamilyMember", order = 1)]
 public class FamilyCharacter : ScriptableObject
 {
+    public string charName;
     
     public int mood;
     public int loyalty;
     public int relationship;
 
-
+    public Room currentRoom;
 
 
     public static void CreateMyAsset()

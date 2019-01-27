@@ -10,7 +10,7 @@ public static class ConstantsManager
     public const int kArgueThreshold = 50;
     //Chances of events
     public const int kChanceMinorEvent = 40;
-    public const int kChanceMajorEvent = 40;
+    public const int kChanceMajorEvent = 20;
     //intervals
     public const int kSmallInterval = 5;
     public const int kMediumInterval = 10;

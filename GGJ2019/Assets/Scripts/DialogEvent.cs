@@ -122,6 +122,11 @@ public class DialogEvent : MonoBehaviour
             isMoveTime = true;
 
         }
+
+        if(currentAction.insertEndingScene.Length >1){
+            
+            SceneManager.LoadScene(currentAction.insertEndingScene);
+        }
         
 
     }

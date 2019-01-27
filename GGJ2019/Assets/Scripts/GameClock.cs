@@ -36,7 +36,7 @@ public class GameClock : MonoBehaviour
     //--------------------------------------------------Unity Methods--------------------------------------------------
     void Awake()
     {
-        if (_instance != null)
+        if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
         }
@@ -54,12 +54,16 @@ public class GameClock : MonoBehaviour
     void Update()
     {
 
-		//if (Input.GetKeyDown (KeyCode.Space)) {
-		//	GoToNextSegment ();
-		//}
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			GoToNextSegment ();
+		}
     }
 
     //--------------------------------------------------Public Methods--------------------------------------------------
+    public void WaitAndGoNextSegment(float waitTime)
+    {
+        Invoke("GoToNextSegment", waitTime);
+    }
 
     public bool GoToNextSegment() {
         //go to next segment
@@ -67,19 +71,17 @@ public class GameClock : MonoBehaviour
         lastTOD = dayCycle[currentTimeBlock].TOD;
         currentTimeBlock = GetNextIndexInSequence(currentTimeBlock);
         //call event if chance rolls
-        if (lastTOD!= dayCycle[currentTimeBlock].TOD)
+        if ((lastTOD!= dayCycle[currentTimeBlock].TOD) && (Random.Range(0, 100) > ConstantsManager.kChanceMajorEvent)) // roll for major event
         {
-            //roll for major event
-            if (Random.Range(0, 100) > ConstantsManager.kChanceMajorEvent)
-            {
-                //major event
-            }
+            RandomEventManager.Instance.RunMajorEvent();
+            
         }
         else
         {
             if (Random.Range(0, 100) > ConstantsManager.kChanceMinorEvent)
             {
                 //minor event
+                RandomEventManager.Instance.RunMinorEvent();
             }
 
         }
