@@ -683,9 +683,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventArray:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: f0c00c859517842409e0fe388afdc152, type: 2}
+  - {fileID: 11400000, guid: 484bad5686407b04ebac6fc914e570ec, type: 2}
+  - {fileID: 11400000, guid: 0235db207509b30439b4a859234ba968, type: 2}
 --- !u!1 &944541383
 GameObject:
   m_ObjectHideFlags: 0

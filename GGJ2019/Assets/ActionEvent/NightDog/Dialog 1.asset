@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8df188f6938ca44ea3acf9d9c1b4243, type: 3}
   m_Name: Dialog 1
   m_EditorClassIdentifier: 
-  timeRequirement: 3
+  timeRequirement: 4
   LeftCharacter: 0
   RightCharacter: 0
-  dialogText: Midnight, you heard dog is barking crazy, So you decided to
+  dialogText: You see a strange man running away, you
   showChoices: 1
-  choice1Text: Go Check
-  choice2Text: Keep Sleeping
-  firstButtonTargetEvent: 1
-  secondButtonTargetEvent: 2
+  choice1Text: Chase
+  choice2Text: Go back
+  firstButtonTargetEvent: 0
+  secondButtonTargetEvent: 0
   showLeftName: 0
   showRightName: 0
   familyStat: 0

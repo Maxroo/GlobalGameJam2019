@@ -15,10 +15,10 @@ MonoBehaviour:
   timeRequirement: 4
   LeftCharacter: 0
   RightCharacter: 0
-  dialogText: You see a strange man running away, you
-  showChoices: 1
-  choice1Text: Chase
-  choice2Text: Go back
+  dialogText: You get stabbed by the man, and faint out
+  showChoices: 0
+  choice1Text: 
+  choice2Text: 
   firstButtonTargetEvent: 0
   secondButtonTargetEvent: 0
   showLeftName: 0
