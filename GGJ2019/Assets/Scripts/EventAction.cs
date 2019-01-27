@@ -43,10 +43,12 @@ public class EventAction : ScriptableObject
     public DialogCanvasManager.CharactersToShow familyMemberToAffect;
     public PlayerStatToModify playerStat = PlayerStatToModify.NONE;
 
-    bool isEnd;
+    public bool isEnd;
 
     public int familyStatAmount;
     public int playerStatAmount;
+
+  
 
 
     public static void CreateMyAsset()

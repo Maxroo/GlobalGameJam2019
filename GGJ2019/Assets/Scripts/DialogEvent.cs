@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogEvent : MonoBehaviour
 {
@@ -107,6 +108,13 @@ public class DialogEvent : MonoBehaviour
         }
             
         DialogCanvasManager.instance.ShowEventDialog(currentAction.dialogText);
+
+        if(currentAction.isEnd){
+
+            GameClock.Instance.GoToNextSegment();
+            SceneManager.UnloadSceneAsync(gameObject.scene);
+
+        }
         
 
     }

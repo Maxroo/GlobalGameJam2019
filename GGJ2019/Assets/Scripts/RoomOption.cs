@@ -14,7 +14,8 @@ public class RoomOption : MonoBehaviour
 
     public void OnPressAction(){
 
-        print(RoomCanvasManager.instance.buttonText[buttonID].text);
+        string actionSceneId = RoomCanvasManager.instance.buttonText[buttonID].text.ToLower().Replace(' ', '.');
+        print(actionSceneId);
 
     }
 
