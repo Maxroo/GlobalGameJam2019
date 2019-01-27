@@ -20,12 +20,11 @@ MonoBehaviour:
   choice1Text: Go Check
   choice2Text: Keep Sleeping
   firstButtonTargetEvent: 1
-  secondButtonTargetEvent: 4
+  secondButtonTargetEvent: 2
   showLeftName: 0
   showRightName: 0
   familyStat: 0
   familyMemberToAffect: 0
   playerStat: 0
-  isEnd: 0
   familyStatAmount: 0
   playerStatAmount: 0

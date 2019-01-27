@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8df188f6938ca44ea3acf9d9c1b4243, type: 3}
-  m_Name: Dialog 0
+  m_Name: Dialog 1
   m_EditorClassIdentifier: 
   timeRequirement: 4
   LeftCharacter: 0
   RightCharacter: 0
-  dialogText: After that, "Your Sister" just feels like a different person.
+  dialogText: After watch some videos about Iluminatti conspiracy on Youtube...
   showChoices: 0
   choice1Text: 
   choice2Text: 
@@ -29,4 +29,3 @@ MonoBehaviour:
   isEnd: 0
   familyStatAmount: 0
   playerStatAmount: 0
-  insertEndingScene: 
