@@ -56,7 +56,7 @@ public class EventAction : ScriptableObject
     public PlayerStatToModify playerStat = PlayerStatToModify.NONE;
 
 
-    bool isEnd;
+    public bool isEnd;
 
     public int familyStatAmount;
     public int playerStatAmount;
