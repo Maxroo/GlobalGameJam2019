@@ -33,6 +33,14 @@ public class GameClock : MonoBehaviour
 	private int currentTimeBlock = 0;
 	private int currentTime = 8;
 
+    public TimeOfDay CurrentTimeOfDay
+    {
+        get
+        {
+            return dayCycle[currentTimeBlock].TOD;
+        }
+    }
+
     //--------------------------------------------------Unity Methods--------------------------------------------------
     void Awake()
     {
@@ -60,6 +68,7 @@ public class GameClock : MonoBehaviour
     }
 
     //--------------------------------------------------Public Methods--------------------------------------------------
+
     public void WaitAndGoNextSegment(float waitTime)
     {
         Invoke("GoToNextSegment", waitTime);
@@ -71,14 +80,14 @@ public class GameClock : MonoBehaviour
         lastTOD = dayCycle[currentTimeBlock].TOD;
         currentTimeBlock = GetNextIndexInSequence(currentTimeBlock);
         //call event if chance rolls
-        if ((lastTOD!= dayCycle[currentTimeBlock].TOD) && (Random.Range(0, 100) > ConstantsManager.kChanceMajorEvent)) // roll for major event
+        if ((lastTOD!= dayCycle[currentTimeBlock].TOD) && (Random.Range(0, 100) < ConstantsManager.kChanceMajorEvent)) // roll for major event
         {
             RandomEventManager.Instance.RunMajorEvent();
             
         }
         else
         {
-            if (Random.Range(0, 100) > ConstantsManager.kChanceMinorEvent)
+            if (Random.Range(0, 100) < ConstantsManager.kChanceMinorEvent)
             {
                 //minor event
                 RandomEventManager.Instance.RunMinorEvent();
@@ -86,6 +95,8 @@ public class GameClock : MonoBehaviour
 
         }
 
+        //shuffle rooms
+        CharacterManager.instance.ShuffleRooms();
         //Update UI
         updateDisplay();
         //return if is out of time
@@ -156,6 +167,10 @@ public class GameClock : MonoBehaviour
     }
 
 }
+
+
+
+
 public class TimeBlock
 {
     public int time = 0;
