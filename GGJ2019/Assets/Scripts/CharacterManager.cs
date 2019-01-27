@@ -164,6 +164,7 @@ public class CharacterManager : MonoBehaviour
         int count = 0;
         for (int i = 0; i <characterList.Length; ++i)
         {
+            Debug.Log(characterList[i]);
             if (characterList[i].currentRoom == rm)
             {
                 ++count;
