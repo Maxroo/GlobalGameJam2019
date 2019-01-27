@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class RoomOption : MonoBehaviour
 {
@@ -14,7 +15,10 @@ public class RoomOption : MonoBehaviour
 
     public void OnPressAction(){
 
-        print(RoomCanvasManager.instance.buttonText[buttonID].text);
+        string actionSceneId = RoomCanvasManager.instance.buttonText[buttonID].text.ToLower().Replace(' ', '.');
+        SceneManager.LoadScene(actionSceneId, LoadSceneMode.Additive);
+        RoomCanvasManager.instance.HideButtons();
+        
 
     }
 

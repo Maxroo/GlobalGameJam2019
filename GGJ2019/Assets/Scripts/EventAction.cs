@@ -58,8 +58,11 @@ public class EventAction : ScriptableObject
 
     public bool isEnd;
 
+
     public int familyStatAmount;
     public int playerStatAmount;
+
+  
 
 
     public static void CreateMyAsset()

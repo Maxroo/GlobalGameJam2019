@@ -11,6 +11,7 @@ public class RoomCanvasManager : MonoBehaviour
     CanvasGroup roomCanvas;
     public GameObject[] roomButtons;
     public Text[] buttonText;
+    public GameObject backButton;
 
     private void Awake() {
 
@@ -34,6 +35,7 @@ public class RoomCanvasManager : MonoBehaviour
 
         
         BackgroundManager.instance.ShowRoomBackground(roomType);
+        backButton.gameObject.SetActive(true);
         HouseManager.instance.HideHouse();
         // RoomNameText.text = roomName;
         roomCanvas.interactable = true;
@@ -53,6 +55,13 @@ public class RoomCanvasManager : MonoBehaviour
             roomButtons[i].gameObject.SetActive(false);
 
         }
+    }
+
+    public void HideButtons(){
+        for(int i = 0; i < roomButtons.Length; i++){
+            roomButtons[i].gameObject.SetActive(false);
+        }
+        backButton.gameObject.SetActive(false);
     }
 
     public void OnBackButtonClicked(){
