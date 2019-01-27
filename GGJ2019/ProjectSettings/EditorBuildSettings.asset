@@ -5,7 +5,49 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/GameUI.unity
+    guid: 358dcbc0994093f4d80744c3ec03b9d1
+  - enabled: 1
+    path: Assets/Scenes/Actions/bask.in.the.sun.unity
+    guid: ae6e83e451d9468469f11cf4675d6db3
+  - enabled: 1
+    path: Assets/Scenes/Actions/clean.the.dishes.unity
+    guid: 6ff694b87d3ab084886c672611aeea8e
+  - enabled: 1
+    path: Assets/Scenes/Actions/cook.food.unity
+    guid: fbe8b68e4973cc84da06356410a5389c
+  - enabled: 1
+    path: Assets/Scenes/Actions/look.at.photobooks.unity
+    guid: 74446adb42bf3c246a272a0f364cd0cf
+  - enabled: 1
+    path: Assets/Scenes/Actions/pet.dog.unity
+    guid: 9121d5bb6f3225846a39cdae38a67b44
+  - enabled: 1
+    path: Assets/Scenes/Actions/play.a.game.unity
+    guid: 5dbbbd83212bfcf45ae6b1b1843e123f
+  - enabled: 1
+    path: Assets/Scenes/Actions/read.a.book.unity
+    guid: af8e85456e1547841b32bd31add9f8b3
+  - enabled: 1
+    path: Assets/Scenes/Actions/rummage.through.stuff.unity
+    guid: 04638d0583115b743bbb1de862e41497
+  - enabled: 1
+    path: Assets/Scenes/Actions/sit.and.rest.unity
+    guid: 3cdf2ac5fa19e574fbb8323090752ebc
+  - enabled: 1
+    path: Assets/Scenes/Actions/sleep.on.parent's.bed.unity
+    guid: 46319086e32a94a4b925a2c34b37603e
+  - enabled: 1
+    path: Assets/Scenes/Actions/sleep.on.your.bed.unity
+    guid: 5319d8f91a8722e4eb633802f27401fd
+  - enabled: 1
+    path: Assets/Scenes/Actions/take.shower.unity
+    guid: 8b5d74add01d58e48831e5b6ea8a5c21
+  - enabled: 1
+    path: Assets/Scenes/Actions/watch.a.movie.unity
+    guid: 72db0f02769dd4f42b905d0ef076a94a
   m_configObjects: {}

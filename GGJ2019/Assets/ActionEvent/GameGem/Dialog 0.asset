@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8df188f6938ca44ea3acf9d9c1b4243, type: 3}
+  m_Name: Dialog 0
+  m_EditorClassIdentifier: 
+  timeRequirement: 4
+  LeftCharacter: 4
+  RightCharacter: 0
+  dialogText: Hey, I heard there is an event called game gem today, gonna host near
+    here, want to come with me?
+  showChoices: 1
+  choice1Text: No, not interested
+  choice2Text: Yes, Lets go
+  firstButtonTargetEvent: 3
+  secondButtonTargetEvent: 1
+  showLeftName: 0
+  showRightName: 0
+  familyStat: 0
+  familyMemberToAffect: 0
+  playerStat: 0
+  isEnd: 0
+  familyStatAmount: 0
+  playerStatAmount: 0
