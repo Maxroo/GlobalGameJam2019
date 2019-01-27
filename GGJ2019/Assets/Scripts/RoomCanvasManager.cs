@@ -29,7 +29,6 @@ public class RoomCanvasManager : MonoBehaviour
             roomButtons[i].SetActive(true);
             buttonText[i].text=actions[i];
             roomButtons[i].GetComponent<RoomOption>().buttonID = i;
-            
 
         }
 
