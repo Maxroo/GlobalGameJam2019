@@ -17,7 +17,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip positiveSFX;
     public AudioClip negativeSFX;
 
-    
+    public int SFXclipID;
     public AudioSource audioSourceRef;
     public AudioSource audioSFXRef;
 
@@ -74,12 +74,11 @@ public class AudioManager : MonoBehaviour
        }
    }
     public void PlayPositiveSoundEffect(){      
-       if(!audioSFXRef.isPlaying){
         audioSFXRef.PlayOneShot(positiveSFX);
        }
-   } public void PlayNegativeSoundEffect(){      
-       if(!audioSFXRef.isPlaying){
+    
+   public void PlayNegativeSoundEffect(){      
         audioSFXRef.PlayOneShot(negativeSFX);
-       }
+       
    }
 }

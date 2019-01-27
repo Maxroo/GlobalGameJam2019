@@ -179,10 +179,10 @@ public class RandomEventManager : MonoBehaviour
         }
         if(passStatChecks)
         {
-        AudioManager.instance.PlayPositiveSoundEffect();
+        AudioManager.instance.SFXclipID = 1;
         }else
         {
-        AudioManager.instance.PlayNegativeSoundEffect();
+        AudioManager.instance.SFXclipID = 2;
         }
         //update UI
         printMinorEvent((passStatChecks ? currentEvent.succeedString : currentEvent.failString), (char1?char1.charName:""), (char2?char2.charName:""), statEffectList);

@@ -19,7 +19,7 @@ public class PlayerStats : MonoBehaviour
         stats = GetComponentsInChildren<Slider>();
         ChangePlayerStats( PlayerStatsManager.instance.mood, PlayerStatsManager.instance.energy);
         canvasGroup = GetComponent<CanvasGroup>();
-        canvasGroup.alpha = 0;
+        canvasGroup.alpha = 1;
     }
 
     public void ChangePlayerStats(float mood, float energy) {
