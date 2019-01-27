@@ -17,6 +17,7 @@ public class Credit : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
+            AudioManager.instance.PlayClickSoundEffect();
             SceneManager.LoadScene("MainMenu");
         }
     }

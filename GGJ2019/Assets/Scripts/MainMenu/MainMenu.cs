@@ -22,11 +22,13 @@ public class MainMenu : MonoBehaviour
 
     public void onPlayClicked()
     {
+        AudioManager.instance.PlayClickSoundEffect();
         SceneManager.LoadScene("OpeningScene");
     }
 
     public void onCreditClicked()
     {
+        AudioManager.instance.PlayClickSoundEffect();
         SceneManager.LoadScene("Credit");
     }
 }
