@@ -2,69 +2,295 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.UI;
+
 public class RandomEventManager : MonoBehaviour
 {
+    public Text minorEventText;
+    public GameObject minorEventPanel;
+    private Animator minorEventAnimator;
+
+
+
+    public static RandomEventManager Instance
+    {
+        get
+        {
+            return _instance;
+        }
+    }
+    private static RandomEventManager _instance;
     private RandomEvent[] minorEvents = {
-        new RandomEvent(), new RandomEvent(), new RandomEvent() };
-    private RandomEvent[] majorEvents = { new RandomEvent(), new RandomEvent(), new RandomEvent() };
+        new RandomEvent("Argue I", "{0} and {1} had a minor argument.", "{0} and {1} nearly had an argument.", CharacterGroup.Humans, CharacterGroup.Humans, null, null, 
+            new Comparison(1, "mood", '<', 0, ConstantsManager.kArgueThreshold),new Comparison(2, "mood", '<', 0, ConstantsManager.kArgueThreshold), 
+            new StatEffect[]{new StatEffect(StatEffect.WhoEffect.Char1, "mood",-ConstantsManager.kSmallInterval), new StatEffect(StatEffect.WhoEffect.Char2, "mood", -ConstantsManager.kSmallInterval)},
+            new StatEffect[]{new StatEffect(StatEffect.WhoEffect.Char1, "mood",0), new StatEffect(StatEffect.WhoEffect.Char2, "mood", 0)}),
+        new RandomEvent("Argue II", "{0} and {1} had a disagreement.", "{0} and {1} agreed to disagree.", CharacterGroup.Humans, CharacterGroup.Humans, null, null,
+            new Comparison(1, "mood", '<', 0, ConstantsManager.kArgueThreshold),new Comparison(2, "mood", '<', 0, ConstantsManager.kArgueThreshold),
+            new StatEffect[]{new StatEffect(StatEffect.WhoEffect.Char1, "mood",-ConstantsManager.kSmallInterval), new StatEffect(StatEffect.WhoEffect.Char2, "mood", -ConstantsManager.kSmallInterval)},
+            new StatEffect[]{new StatEffect(StatEffect.WhoEffect.Char1, "mood",0), new StatEffect(StatEffect.WhoEffect.Char2, "mood", 0)}),
+        new RandomEvent("Argue III", "{0} and {1} argued over something silly.", "{0} and {1} nearly argued over something silly.", CharacterGroup.Humans, CharacterGroup.Humans, null, null,
+            new Comparison(1, "mood", '<', 0, ConstantsManager.kArgueThreshold),new Comparison(2, "mood", '<', 0, ConstantsManager.kArgueThreshold),
+            new StatEffect[]{new StatEffect(StatEffect.WhoEffect.Char1, "mood",-ConstantsManager.kSmallInterval), new StatEffect(StatEffect.WhoEffect.Char2, "mood", -ConstantsManager.kSmallInterval)},
+            new StatEffect[]{new StatEffect(StatEffect.WhoEffect.Char1, "mood",0), new StatEffect(StatEffect.WhoEffect.Char2, "mood", 0)}),
+        new RandomEvent("Slap", "During a fight,{0} slapped {1}.", "{0} had to leave the room to avoid fighting {1}.", CharacterGroup.Female, CharacterGroup.Humans, null, null,
+            new Comparison(1, "mood", '<', 0, ConstantsManager.kFightThreshold),new Comparison(2, "mood", '<', 0, ConstantsManager.kArgueThreshold),
+            new StatEffect[]{new StatEffect(StatEffect.WhoEffect.Char1, "mood",-ConstantsManager.kMediumInterval), new StatEffect(StatEffect.WhoEffect.Char2, "mood", -ConstantsManager.kMediumInterval), new StatEffect(StatEffect.WhoEffect.Char2, "relationship", -ConstantsManager.kMediumInterval)},
+            new StatEffect[]{new StatEffect(StatEffect.WhoEffect.Char1, "mood",-ConstantsManager.kSmallInterval), new StatEffect(StatEffect.WhoEffect.Char1, "relationship",ConstantsManager.kMediumInterval)}),
+        new RandomEvent("Puppy", "{0} successfully got scritches from {1}.", "{0} unsuccessfully begged {1} for scritches.", CharacterGroup.Pet, CharacterGroup.Humans, null, null,
+            new Comparison(1, "mood", '>', 0,0),new Comparison(2, "mood", '<', 0, ConstantsManager.kFightThreshold),
+            new StatEffect[]{new StatEffect(StatEffect.WhoEffect.Char1, "mood",ConstantsManager.kMediumInterval), new StatEffect(StatEffect.WhoEffect.Char2, "mood", ConstantsManager.kMediumInterval)},
+            new StatEffect[]{new StatEffect(StatEffect.WhoEffect.Char1, "mood",ConstantsManager.kSmallInterval), new StatEffect(StatEffect.WhoEffect.Char2, "mood",ConstantsManager.kSmallInterval)}),
+        new RandomEvent("Accident", "{0} slipped and fell.","{0} nearly tripped on the stairs.", CharacterGroup.Humans, CharacterGroup.None, null, null,
+            new Comparison(1, "mood", '>', 0,0),new Comparison(2, "mood", '<', 0, ConstantsManager.kFightThreshold),
+            new StatEffect[]{ },
+            new StatEffect[]{ })
+
+    };
+    private RandomEvent[] majorEvents = {
+          new RandomEvent("Argue I", "{0} and {1} had a minor argument.", "{0} and {1} nearly had an argument.", CharacterGroup.Humans, CharacterGroup.Humans, null, null,
+            new Comparison(1, "mood", '<', 0, ConstantsManager.kArgueThreshold),new Comparison(2, "mood", '<', 0, ConstantsManager.kArgueThreshold),
+            new StatEffect[]{new StatEffect(StatEffect.WhoEffect.Char1, "mood",-ConstantsManager.kSmallInterval), new StatEffect(StatEffect.WhoEffect.Char2, "mood", -ConstantsManager.kSmallInterval)},
+            new StatEffect[]{new StatEffect(StatEffect.WhoEffect.Char1, "mood",0), new StatEffect(StatEffect.WhoEffect.Char2, "mood", 0)}),
+            new RandomEvent("Argue I", "{0} and {1} had a minor argument.", "{0} and {1} nearly had an argument.", CharacterGroup.Humans, CharacterGroup.Humans, null, null,
+            new Comparison(1, "mood", '<', 0, ConstantsManager.kArgueThreshold),new Comparison(2, "mood", '<', 0, ConstantsManager.kArgueThreshold),
+            new StatEffect[]{new StatEffect(StatEffect.WhoEffect.Char1, "mood",-ConstantsManager.kSmallInterval), new StatEffect(StatEffect.WhoEffect.Char2, "mood", -ConstantsManager.kSmallInterval)},
+            new StatEffect[]{new StatEffect(StatEffect.WhoEffect.Char1, "mood",0), new StatEffect(StatEffect.WhoEffect.Char2, "mood", 0)}),
+    };
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-
+        if (_instance != null && this != _instance)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+            minorEventAnimator = minorEventPanel.GetComponent<Animator>();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RunMinorEvent()
     {
-
-    }
-
-
-    public bool RunMinorEvent()
-    {
-        return runEvent(minorEvents);
+        bool notYetSucceeded = true;
+        //while (notYetSucceeded)
+        //{
+            notYetSucceeded = !TryRunMinorEvent();
+        //}
     }
 
     public bool RunMajorEvent()
     {
-        return runEvent(majorEvents);
+        Debug.Log("RunMajorEvent");
+        //return runEvent(majorEvents);
+        return true;
     }
     //----------------------------------------------------------------------------------------------------
 
-    private bool runEvent(RandomEvent[] eventsList)
+
+    private bool TryRunMinorEvent()
     {
+        Debug.Log("RunMinorEvent");
+        //return runEvent(minorEvents);
+
         //choose event from list
-        RandomEvent currentEvent = eventsList[Random.Range(0, eventsList.Length)];
-        //if room requirement, see if it has valid NPC
+        RandomEvent currentEvent = minorEvents[Random.Range(0, minorEvents.Length)];
+        Debug.Log(currentEvent.mName);
+        //if room requirement, see if room has valid NPC
+
+        FamilyCharacter[] allCharacters = CharacterManager.instance.GetCharacters();
+        int charsInRoom = allCharacters.Length;
+        FamilyCharacter[] validCharacters;
+
         if (currentEvent.mRoomReq != null)
         {
-            HouseRoom room;// = ?
-            int roomNPCCount = 0;
-            //make list of valid NPCs in room
-            List<FamilyCharacter> validNPCs = new List<FamilyCharacter>();
-            /*foreach (FamilyMember member in room.GetNPCs())
+            List<FamilyCharacter> validCharacterList = new List<FamilyCharacter>();
+            for (int i = 0; i < allCharacters.Length; ++i)
             {
-                if CharacterIsInGroup(eventsList[chosenEventIndex].mCharacter1, member.name){
-                    validNPCs.Add(member);
+                if ((allCharacters[i].currentRoom == currentEvent.mRoomReq) && (CharacterIsInGroup(currentEvent.mCharacter1, allCharacters[i].charName)))
+                {
+                    validCharacterList.Add(allCharacters[i]);
                 }
-            }*/
-            //if list.length==0, return false; else choose random as char1 and char2
-            if (validNPCs.Count == 0) { return false; }
-            else
-            {
-                //FamilyCharacter char1 = validNPCs[Random.Range(0, validNPCs.Count)];
-                //FamilyCharacter char2 = GetValidFamCharFromList(room.GetNPCs(), currentEvent.mCharacter2, char1);
-                
-            }
 
-        } else //if no room req, choose from valid NPCs
-        {
-            //FamilyCharacter char1 = GetValidFamCharFromList(GetAllNPCs(), currentEvent.mCharacter2);
-            //FamilyCharacter char2 = GetValidFamCharFromList(GetAllNPCs(), currentEvent.mCharacter2, char1);
+            }
+            validCharacters = validCharacterList.ToArray();
         }
+        else
+        {
+
+            List<FamilyCharacter> validCharacterList = new List<FamilyCharacter>();
+            for (int i = 0; i < allCharacters.Length; ++i)
+            { 
+                if (CharacterIsInGroup(currentEvent.mCharacter1, allCharacters[i].charName))
+                {
+                    validCharacterList.Add(allCharacters[i]);
+                }
+            }
+            validCharacters = validCharacterList.ToArray();
+        }
+
+        //choose random character from valid characters
+        if (validCharacters.Length <= 0)
+        {
+            return false;
+        }
+        //Debug.Log(validCharacters.Length);
+        FamilyCharacter char1 = validCharacters[Random.Range(0, validCharacters.Length)];
+        FamilyCharacter char2 = null;
+        if (currentEvent.mCharacter2 != CharacterGroup.None)
+        {
+            char2 = GetValidFamCharFromList(allCharacters, currentEvent.mCharacter2, char1.charName);
+        }
+        Debug.Log(char1.charName);
+        if (char2) { Debug.Log(char2.charName); }
+        //check comparisons
+        bool passStatChecks = true;
+
+        //apply effect
+        StatEffect[] statEffectList = (passStatChecks? currentEvent.succeedEffects: currentEvent.failEffects);
+        
+        foreach (StatEffect stat in statEffectList)
+        {
+            switch (stat.who)
+            {
+                    case StatEffect.WhoEffect.Char1:
+                        processStatEffect(char1, stat.stat, stat.delta);
+                        break;
+                    case StatEffect.WhoEffect.Char2:
+                        processStatEffect(char2, stat.stat, stat.delta);
+                        break;
+                    case StatEffect.WhoEffect.Witnesses:
+                        foreach (FamilyCharacter famchar in allCharacters)
+                        {
+                            if (famchar.currentRoom == char1.currentRoom && (famchar != char1) && (famchar!=char2))
+                            {
+                                processStatEffect(famchar, stat.stat, stat.delta);
+                            }
+                        }
+                        break;
+                    case StatEffect.WhoEffect.All:
+                        foreach (FamilyCharacter famchar in allCharacters)
+                        {
+                            processStatEffect(famchar, stat.stat, stat.delta);
+                        }
+                        break;
+                    default:
+                        break;
+             } 
+        }
+
+        //update UI
+        printMinorEvent((passStatChecks ? currentEvent.succeedString : currentEvent.failString), (char1?char1.charName:""), (char2?char2.charName:""), statEffectList);
+        //minorEventText.text = (passStatChecks ? currentEvent.succeedString : currentEvent.failString);
 
         return true;
     }
+
+    private void processStatEffect(FamilyCharacter character, string stat, int delta)
+    {
+        if (stat == "mood")
+        {
+            character.mood += delta;
+        }else if (stat == "relationship")
+        {
+            character.relationship += delta;
+        }else if (stat == "loyalty")
+        {
+            character.loyalty += delta;
+        }
+    }
+
+    private void printMinorEvent(string mainText, string char1Name, string char2Name, StatEffect[] statEffects)
+    {
+        string str = mainText.Replace("{0}", char1Name).Replace("{1}", char2Name);
+        str += "\n";
+        for (int i= 0; i < statEffects.Length; ++i)
+        {
+            str += "     ";
+            switch (statEffects[i].who)
+            {
+                case StatEffect.WhoEffect.Char1:
+                    str += char1Name + " ";
+                    break;
+                case StatEffect.WhoEffect.Char2:
+                    str += char2Name + " ";
+                    break;
+                case StatEffect.WhoEffect.Witnesses:
+                    str += "Witnesses ";
+                    break;
+                case StatEffect.WhoEffect.All:
+                    str += "Everyone ";
+                    break;
+                default:
+                    break;
+            }
+            str += statEffects[i].stat + " " + statEffects[i].delta + "\n";
+    
+
+        }
+        minorEventText.text = str;
+        minorEventAnimator.SetTrigger("mTrigger");
+
+    }
+
+    private string getEffectDescription(StatEffect stat)
+    {
+        string rtn = "";
+        return rtn;
+    }
+
+    private bool CheckComparison(Comparison comp, FamilyCharacter char1, FamilyCharacter char2)
+    {
+        bool rtn = false;
+        switch (comp.op)
+        {
+            case '>':
+                break;
+            case '<':
+                break;
+            case '=':
+                break;
+            default:
+                break;
+        }
+        return rtn;
+    }
+
+    //private bool runEvent(RandomEvent[] eventsList)
+    //{
+    //    //choose event from list
+    //    RandomEvent currentEvent = eventsList[Random.Range(0, eventsList.Length)];
+    //    //if room requirement, see if it has valid NPC
+    //    if (currentEvent.mRoomReq != null)
+    //    {
+    //        HouseRoom room;// = ?
+    //        int roomNPCCount = 0;
+    //        //make list of valid NPCs in room
+    //        List<FamilyCharacter> validNPCs = new List<FamilyCharacter>();
+    //        /*foreach (FamilyMember member in room.GetNPCs())
+    //        {
+    //            if CharacterIsInGroup(eventsList[chosenEventIndex].mCharacter1, member.name){
+    //                validNPCs.Add(member);
+    //            }
+    //        }*/
+    //        //if list.length==0, return false; else choose random as char1 and char2
+    //        if (validNPCs.Count == 0) { return false; }
+    //        else
+    //        {
+    //            //FamilyCharacter char1 = validNPCs[Random.Range(0, validNPCs.Count)];
+    //            //FamilyCharacter char2 = GetValidFamCharFromList(room.GetNPCs(), currentEvent.mCharacter2, char1);
+                
+    //        }
+
+    //    } else //if no room req, choose from valid NPCs
+    //    {
+    //        //FamilyCharacter char1 = GetValidFamCharFromList(GetAllNPCs(), currentEvent.mCharacter2);
+    //        //FamilyCharacter char2 = GetValidFamCharFromList(GetAllNPCs(), currentEvent.mCharacter2, char1);
+    //    }
+
+    //    return true;
+    //}
 
 
     private FamilyCharacter GetValidFamCharFromList(FamilyCharacter[] list, CharacterGroup group, string exclude = "")
@@ -72,7 +298,7 @@ public class RandomEventManager : MonoBehaviour
         List<FamilyCharacter> qualifiedList = new List<FamilyCharacter>();
         for (int i = 0; i < list.Length; ++i)
         {
-            if (CharacterIsInGroup(group, list[i].name) && (list[i].name != exclude))
+            if (CharacterIsInGroup(group, list[i].charName) && (list[i].charName != exclude))
             {
                 qualifiedList.Add(list[i]);
             }
@@ -97,34 +323,34 @@ public class RandomEventManager : MonoBehaviour
                 rtn = true;
                 break;
             case CharacterGroup.Mother:
-                rtn = (character == "mother");
+                rtn = (character == "Mother");
                 break;
             case CharacterGroup.Father:
-                rtn = (character == "father");
+                rtn = (character == "Father");
                 break;
             case CharacterGroup.Brother:
-                rtn = (character == "brother");
+                rtn = (character == "Brother");
                 break;
             case CharacterGroup.Sister:
-                rtn = (character == "sister");
+                rtn = (character == "Sister");
                 break;
             case CharacterGroup.Pet:
-                rtn = (character == "pet");
+                rtn = (character == "Dog");
                 break;
             case CharacterGroup.Humans:
-                rtn = ((character == "mother")|| (character == "father")||(character == "brother")||(character == "sister"));
+                rtn = ((character == "Mother")|| (character == "Father")||(character == "Brother")||(character == "Sister"));
                 break;
             case CharacterGroup.Adults:
-                rtn = ((character == "mother") || (character == "father"));
+                rtn = ((character == "Mother") || (character == "Father"));
                 break;
             case CharacterGroup.Kids:
-                rtn = ((character == "brother") || (character == "sister"));
+                rtn = ((character == "Brother") || (character == "Sister"));
                 break;
             case CharacterGroup.Female:
-                rtn = ((character == "mother") || (character == "sister"));
+                rtn = ((character == "Mother") || (character == "Sister"));
                 break;
             case CharacterGroup.Male:
-                rtn = ((character == "father") || (character == "brother"));
+                rtn = ((character == "Father") || (character == "Brother"));
                 break;
             case CharacterGroup.Any:
                 rtn = true;
@@ -141,7 +367,7 @@ public class RandomEventManager : MonoBehaviour
 }
 
 
-
+//----------------------------------------------------------------------------------------------------
 
 public class RandomEvent
 {
@@ -153,7 +379,7 @@ public class RandomEvent
     public CharacterGroup mCharacter1;
     public CharacterGroup mCharacter2;
     public Room? mRoomReq;
-    public TimeOfDay mTimeReq;
+    public TimeOfDay? mTimeReq;
     //comparisons
     public Comparison statCheck1;
     public Comparison statCheck2;
@@ -161,10 +387,13 @@ public class RandomEvent
     //public bool repeatable;
     //public bool hasHappened;
     //Effects
-    StatEffect[] succeedEffects;
-    StatEffect[] failEffects;
+    public StatEffect[] succeedEffects;
+    public StatEffect[] failEffects;
     //---------------------------------------------------
-
+    public RandomEvent(string n, string succeed, string fail, CharacterGroup char1, CharacterGroup char2, Room? rReq, TimeOfDay? tod, Comparison comp1, Comparison comp2, StatEffect[] succEff, StatEffect[] failEff)
+    {
+        mName = n; succeedString = succeed; failString = fail; mCharacter1 = char1; mCharacter2 = char2; mRoomReq = rReq; mTimeReq = tod; statCheck1 = comp1; statCheck2 = comp2; succeedEffects = succEff; failEffects = failEff;
+    }
 
 
 
@@ -199,23 +428,6 @@ public class StatEffect
     public enum WhoEffect { Char1, Char2, Witnesses, All};
 }
 
-
-public enum CharacterGroup
-{
-    None,
-    Mother,
-    Father,
-    Brother,
-    Sister,
-    Pet,
-    Humans,
-    Adults,
-    Kids,
-    Female,
-    Male,
-    Any,
-    All,
-};
 
 public enum Room
 {

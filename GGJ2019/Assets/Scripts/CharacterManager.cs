@@ -10,12 +10,21 @@ public class CharacterManager : MonoBehaviour
     public FamilyCharacter father;
     public FamilyCharacter sister;
     public FamilyCharacter brother;
+    public FamilyCharacter dog;
+
+    private FamilyCharacter[] characterList;
 
     private void Awake() {
         if(instance != null){
             Destroy(this);
         }
         instance = this;
+        characterList = new FamilyCharacter[]  {mother, father, sister, brother, dog };
+}
+
+    public FamilyCharacter[] GetCharacters()
+    {
+        return characterList;
     }
 
     public void changeMood(int amountChanged, string characterToChange){
@@ -120,3 +129,20 @@ public class CharacterManager : MonoBehaviour
     }
 
 }
+
+public enum CharacterGroup
+{
+    None,
+    Mother,
+    Father,
+    Brother,
+    Sister,
+    Pet,
+    Humans,
+    Adults,
+    Kids,
+    Female,
+    Male,
+    Any,
+    All,
+};
