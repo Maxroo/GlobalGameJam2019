@@ -14,6 +14,8 @@ public class FamilyCharacter : ScriptableObject
 
     public Room currentRoom;
 
+    public int[] percentChanceRooms;
+
 
     public static void CreateMyAsset()
     {

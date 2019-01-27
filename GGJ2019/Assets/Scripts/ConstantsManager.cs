@@ -11,6 +11,7 @@ public static class ConstantsManager
     //Chances of events
     public const int kChanceMinorEvent = 40;
     public const int kChanceMajorEvent = 20;
+    public const int kChanceOfMoveRoom = 60;
     //intervals
     public const int kSmallInterval = 5;
     public const int kMediumInterval = 10;
