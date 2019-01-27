@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class RoomCanvasManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Text RoomNameText;
+    // public Text RoomNameText;
     public static RoomCanvasManager instance;
     CanvasGroup roomCanvas;
     public GameObject[] roomButtons;
@@ -32,9 +32,10 @@ public class RoomCanvasManager : MonoBehaviour
 
         }
 
+        
         BackgroundManager.instance.ShowRoomBackground(roomType);
         HouseManager.instance.HideHouse();
-        RoomNameText.text = roomName;
+        // RoomNameText.text = roomName;
         roomCanvas.interactable = true;
         roomCanvas.blocksRaycasts = true;
         roomCanvas.alpha = 1;
@@ -57,6 +58,9 @@ public class RoomCanvasManager : MonoBehaviour
     public void OnBackButtonClicked(){
         HouseManager.instance.ShowHouse();
         HideRoom();
+        BackgroundManager.instance.isInRoom = false;
+        BackgroundManager.instance.checkIsInRoom();
+
     }
     
 }
