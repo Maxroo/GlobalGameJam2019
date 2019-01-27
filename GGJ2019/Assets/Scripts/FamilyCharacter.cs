@@ -12,7 +12,9 @@ public class FamilyCharacter : ScriptableObject
     public int loyalty;
     public int relationship;
 
-    public Room currentRoom;
+    public Room currentRoom = Room.Kitchen;
+
+    public int[] percentChanceRooms;
 
 
     public static void CreateMyAsset()

@@ -48,7 +48,7 @@ public class RandomEventManager : MonoBehaviour
 
     };
     private string[] majorEvents = {
-        "ArgumentAtTheTable","Date","GameJam","NightRob","PipeBurst","ElectricBill","SisterRobot","PoorSleep"
+        "ArgumentAtTheTable","Date","GameGem","NightRob","PipeBurst","ElectricBill","SisterRobot","PoorSleep"
     };
     // Start is called before the first frame update
     void Awake()

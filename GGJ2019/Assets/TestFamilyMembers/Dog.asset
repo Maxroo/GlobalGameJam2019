@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Dog
   m_EditorClassIdentifier: 
   charName: Dog
-  mood: 0
+  mood: 20
   loyalty: 0
   relationship: 0
-  currentRoom: 0
+  currentRoom: 1
+  percentChanceRooms: 0a000000280000002800000000000000000000000a00000000000000

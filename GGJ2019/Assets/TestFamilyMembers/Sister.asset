@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Sister
   m_EditorClassIdentifier: 
   charName: Sister
-  mood: 0
+  mood: -70
   loyalty: 0
   relationship: 0
-  currentRoom: 0
+  currentRoom: 6
+  percentChanceRooms: 0a000000050000000a00000014000000000000000500000032000000

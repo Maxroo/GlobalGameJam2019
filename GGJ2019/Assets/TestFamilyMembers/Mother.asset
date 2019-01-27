@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Mother
   m_EditorClassIdentifier: 
   charName: Mother
-  mood: 0
+  mood: -65
   loyalty: 0
-  relationship: 0
-  currentRoom: 0
+  relationship: 10
+  currentRoom: 4
+  percentChanceRooms: 320000000500000005000000000000001e000000000000000a000000
