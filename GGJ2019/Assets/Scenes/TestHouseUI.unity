@@ -3055,8 +3055,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
-  mood: 0.9
-  loyalty: 1
+  mood: 0.35
+  loyalty: 0.87
   relationship: 0.25
 --- !u!1 &674455172
 GameObject:
@@ -7609,9 +7609,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
-  mood: 0.9
-  loyalty: 1
-  relationship: 0.25
+  mood: 0.5
+  loyalty: 0.5
+  relationship: 0.5
 --- !u!1 &1626737754
 GameObject:
   m_ObjectHideFlags: 0
@@ -8107,8 +8107,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 392.26, y: -2}
-  m_SizeDelta: {x: 29.02, y: 363}
+  m_AnchoredPosition: {x: 391.44, y: -2}
+  m_SizeDelta: {x: 23.13, y: 363}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1689545586
 MonoBehaviour:
@@ -8351,9 +8351,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
-  mood: 0.9
-  loyalty: 1
-  relationship: 0.25
+  mood: 0.11
+  loyalty: 0.33
+  relationship: 0.88
 --- !u!1 &1729644893
 GameObject:
   m_ObjectHideFlags: 0
@@ -9553,7 +9553,7 @@ RectTransform:
   m_GameObject: {fileID: 2026119838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.9625, z: 1}
   m_Children:
   - {fileID: 1627034154}
   - {fileID: 1614178806}
