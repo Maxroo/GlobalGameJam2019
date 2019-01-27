@@ -182,7 +182,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Audio:\n  Audio Tree"
+  m_Text: "Audio:\n  Audio Tree - Jeffrey Yiu"
 --- !u!222 &255031753
 CanvasRenderer:
   m_ObjectHideFlags: 0
