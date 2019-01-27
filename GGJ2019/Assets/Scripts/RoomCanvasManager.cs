@@ -33,6 +33,7 @@ public class RoomCanvasManager : MonoBehaviour
 
         }
 
+        
         BackgroundManager.instance.ShowRoomBackground(roomType);
         HouseManager.instance.HideHouse();
         RoomNameText.text = roomName;
@@ -58,6 +59,9 @@ public class RoomCanvasManager : MonoBehaviour
     public void OnBackButtonClicked(){
         HouseManager.instance.ShowHouse();
         HideRoom();
+        BackgroundManager.instance.isInRoom = false;
+        BackgroundManager.instance.checkIsInRoom();
+
     }
     
 }
