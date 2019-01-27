@@ -56,10 +56,13 @@ public class EventAction : ScriptableObject
     public PlayerStatToModify playerStat = PlayerStatToModify.NONE;
 
 
-   public bool isEnd;
+    public bool isEnd;
+
 
     public int familyStatAmount;
     public int playerStatAmount;
+
+  
 
 
     public static void CreateMyAsset()

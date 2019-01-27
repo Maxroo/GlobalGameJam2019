@@ -15,16 +15,17 @@ MonoBehaviour:
   timeRequirement: 4
   LeftCharacter: 0
   RightCharacter: 0
-  dialogText: You see a strange man running away, you
-  showChoices: 1
-  choice1Text: Chase
-  choice2Text: Go back
-  firstButtonTargetEvent: 0
-  secondButtonTargetEvent: 0
+  dialogText: You wake up, and follow the sound to find your dog
+  showChoices: 0
+  choice1Text: 
+  choice2Text: 
+  firstButtonTargetEvent: 2
+  secondButtonTargetEvent: 3
   showLeftName: 0
   showRightName: 0
   familyStat: 0
   familyMemberToAffect: 0
   playerStat: 0
+  isEnd: 0
   familyStatAmount: 0
   playerStatAmount: 0

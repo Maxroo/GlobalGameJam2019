@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogEvent : MonoBehaviour
 {
 
     private bool spriteOutOnLeft;
     private bool spriteOutOnRight;
+
+    bool isNextEnd;
 
     private DialogCanvasManager.CharactersToShow characterOnRight;
     private DialogCanvasManager.CharactersToShow characterOnLeft;
@@ -107,6 +110,13 @@ public class DialogEvent : MonoBehaviour
         }
             
         DialogCanvasManager.instance.ShowEventDialog(currentAction.dialogText);
+
+        if(currentAction.isEnd){
+
+            isNextEnd = true;
+            
+
+        }
         
 
     }
@@ -179,10 +189,24 @@ public class DialogEvent : MonoBehaviour
     }
 
     private void Update() {
-        if(Input.GetMouseButtonUp(0) && actionNumber < eventArray.Length && !DialogCanvasManager.instance.isInChoice){
-            NextAction(actionNumber);
+        if(Input.GetMouseButtonUp(0) && isNextEnd){
+
+            GameClock.Instance.GoToNextSegment();
+            BackgroundManager.instance.isInRoom = false;
+            BackgroundManager.instance.checkIsInRoom();
+            HouseManager.instance.ShowHouse();
+            RoomCanvasManager.instance.HideRoom();
+            SceneManager.UnloadSceneAsync(gameObject.scene);
+
+        }else if(Input.GetMouseButtonUp(0) && actionNumber < eventArray.Length && !DialogCanvasManager.instance.isInChoice){
+
             actionNumber++;
+            NextAction(actionNumber);
         }
+    }
+
+    private void Start() {
+        NextAction(0);
     }
 
 
