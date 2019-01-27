@@ -993,7 +993,6 @@ MonoBehaviour:
   roomSceneName: BathRoom
   roomActions:
   - Take Shower
-  - Brush Teeth
   roomType: 3
 --- !u!114 &111354622
 MonoBehaviour:
@@ -3351,6 +3350,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3366,6 +3366,22 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac022d54afdd9a34a87caa6ba96e0903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mood: 0
+  charisma: 0
+  knowledge: 0
+  energy: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -8312,8 +8328,7 @@ MonoBehaviour:
   roomSceneName: SunRoom
   roomActions:
   - Pet Dog
-  - Enjoy Scenery
-  - Bask in Sun
+  - Bask in the sun
   roomType: 6
 --- !u!114 &1349558348
 MonoBehaviour:
@@ -8585,6 +8600,7 @@ MonoBehaviour:
   - {fileID: 237474804}
   - {fileID: 674455174}
   - {fileID: 197084972}
+  backButton: {fileID: 690891776}
 --- !u!225 &1396205513
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -10444,8 +10460,7 @@ MonoBehaviour:
   roomSceneName: KidBedroom
   roomActions:
   - Sleep on your Bed
-  - Sleep on sibling's bed
-  - Rummage through stuff
+  - Rummage Through Stuff
   roomType: 2
 --- !u!114 &1729644896
 MonoBehaviour:

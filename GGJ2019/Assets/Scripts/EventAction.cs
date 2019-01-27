@@ -55,12 +55,9 @@ public class EventAction : ScriptableObject
     public DialogCanvasManager.CharactersToShow familyMemberToAffect;
     public PlayerStatToModify playerStat = PlayerStatToModify.NONE;
 
-<<<<<<< HEAD
-    public bool isEnd;
-=======
 
-    bool isEnd;
->>>>>>> master
+    public bool isEnd;
+
 
     public int familyStatAmount;
     public int playerStatAmount;
