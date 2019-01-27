@@ -13,7 +13,10 @@ public class EventAction : ScriptableObject
     public bool showChoices;
 
     public string choice1Text;
-    public string coice2Text;
+    public string choice2Text;
+
+    public int firstButtonTargetEvent;
+    public int secondButtonTargetEvent;
 
     public bool showLeftName;
     public bool showRightName;
