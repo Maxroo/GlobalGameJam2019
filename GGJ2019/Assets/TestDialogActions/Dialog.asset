@@ -22,3 +22,7 @@ MonoBehaviour:
   secondButtonTargetEvent: 4
   showLeftName: 0
   showRightName: 0
+  familyStat: 3
+  playerStat: 0
+  playerStatAmount: 0
+  familyStatAmount: 0

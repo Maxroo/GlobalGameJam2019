@@ -96,9 +96,80 @@ public class DialogEvent : MonoBehaviour
         if(currentAction.showChoices){
             DialogCanvasManager.instance.ShowButtonChoices(currentAction.choice1Text, currentAction.choice2Text, currentAction.firstButtonTargetEvent, currentAction.secondButtonTargetEvent);
         }
+
+        if(currentAction.playerStat != EventAction.PlayerStatToModify.NONE){
+            ModifyPlayerStats(currentAction.playerStat, currentAction.playerStatAmount);
+        }
+
+        if(currentAction.familyStat != EventAction.FamilyStatToModify.NONE){
+
+        }
             
         DialogCanvasManager.instance.ShowEventDialog(currentAction.dialogText);
         
+
+    }
+
+    public void ModifyPlayerStats(EventAction.PlayerStatToModify statToModify, int amount){
+
+        switch(statToModify){
+
+            case EventAction.PlayerStatToModify.CHARISMA:
+            PlayerStatsManager.instance.charisma += amount;
+            break;
+
+            case EventAction.PlayerStatToModify.KNOWLEDGE:
+            PlayerStatsManager.instance.knowledge += amount;
+            break;
+
+            case EventAction.PlayerStatToModify.ENERGY:
+            PlayerStatsManager.instance.energy += amount;
+            break;
+
+            case EventAction.PlayerStatToModify.MOOD:
+            PlayerStatsManager.instance.mood += amount;
+            break;
+        }
+
+    }
+
+    public void ModifyFamilyStats(EventAction.FamilyStatToModify statToModify, int amount, DialogCanvasManager.CharactersToShow character){
+
+        string nameString = null;
+
+        switch(character){
+            case DialogCanvasManager.CharactersToShow.MOM:
+           nameString = "mother";
+           break;
+
+           case DialogCanvasManager.CharactersToShow.DAD:
+           nameString = "father";
+           break;
+
+           case DialogCanvasManager.CharactersToShow.SISTER:
+           nameString = "sister";
+           break;
+
+           case DialogCanvasManager.CharactersToShow.BROTHER:
+           nameString = "brother";
+           break;
+        }
+
+        switch(statToModify){
+
+            case EventAction.FamilyStatToModify.MOOD:
+            CharacterManager.instance.changeMood(amount, nameString);
+            break;
+
+            case EventAction.FamilyStatToModify.LOYALTY:
+            CharacterManager.instance.changeLoyalty(amount, nameString);
+            break;
+
+            case EventAction.FamilyStatToModify.RELATIONSHIP:
+            CharacterManager.instance.changeRelationship(amount, nameString);
+            break;
+
+        }
 
     }
 

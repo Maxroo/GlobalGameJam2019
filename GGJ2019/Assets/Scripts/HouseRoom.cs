@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class HouseRoom : MonoBehaviour
 {
-    // Start is called before the first frame update
-   FamilyMember[] charactersInRoom;
    public string roomSceneName;
    public string[] roomActions;
    public BackgroundManager.RoomNames roomType;
