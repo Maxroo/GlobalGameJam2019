@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Father
   m_EditorClassIdentifier: 
   charName: Father
-  mood: -50
-  loyalty: 0
-  relationship: 10
-  currentRoom: 4
+  mood: 77
+  loyalty: 71
+  relationship: 0
+  currentRoom: 5
   percentChanceRooms: 05000000140000000500000000000000140000003200000000000000

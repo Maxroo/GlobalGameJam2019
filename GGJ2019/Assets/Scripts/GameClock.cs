@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -99,8 +99,10 @@ public class GameClock : MonoBehaviour
         CharacterManager.instance.ShuffleRooms();
         //Update UI
         updateDisplay();
-        //return if is out of time
-        return (currentTime >= (numberOfDays*24));   
+
+
+
+        return CheckForEnding();
     }
 
 	public string GetCurrentDayString(){
@@ -164,6 +166,44 @@ public class GameClock : MonoBehaviour
         }
         currentTimeBlock = timeFound;
 
+    }
+
+    private bool CheckForEnding()
+    {
+        bool isEnd = false;
+        if (CharacterManager.instance.brother.mood < ConstantsManager.kLeaveThreshold || CharacterManager.instance.brother.loyalty < ConstantsManager.kLeaveThreshold || CharacterManager.instance.brother.relationship < ConstantsManager.kLeaveThreshold)
+        {
+            isEnd = true;
+            SceneManager.LoadSceneAsync("BrotherLeaves 1");
+        }
+        else if (CharacterManager.instance.sister.mood < ConstantsManager.kLeaveThreshold || CharacterManager.instance.sister.loyalty < ConstantsManager.kLeaveThreshold || CharacterManager.instance.sister.relationship < ConstantsManager.kLeaveThreshold)
+        {
+            isEnd = true;
+            SceneManager.LoadSceneAsync("SisterLeaves");
+        }
+        else if (CharacterManager.instance.mother.mood < ConstantsManager.kLeaveThreshold || CharacterManager.instance.mother.loyalty < ConstantsManager.kLeaveThreshold || CharacterManager.instance.mother.relationship < ConstantsManager.kLeaveThreshold)
+        {
+            isEnd = true;
+            SceneManager.LoadSceneAsync("MotherLeaves");
+        }
+        else if (CharacterManager.instance.father.mood < ConstantsManager.kLeaveThreshold || CharacterManager.instance.father.loyalty < ConstantsManager.kLeaveThreshold || CharacterManager.instance.father.relationship < ConstantsManager.kLeaveThreshold)
+        {
+            isEnd = true;
+            SceneManager.LoadSceneAsync("FatherLeaves");
+        }
+
+        if (PlayerStatsManager.instance.mood < ConstantsManager.kLeaveThreshold)
+        {
+            isEnd = true;
+            SceneManager.LoadSceneAsync("PlayerLeaves");
+        }
+        if (currentTime >= (numberOfDays * 24))
+        {
+            isEnd = true;
+            //replace with win condition
+            SceneManager.LoadSceneAsync("PlayerLeaves");
+        }
+        return isEnd;
     }
 
 }

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Brother
   m_EditorClassIdentifier: 
   charName: Brother
-  mood: -65
-  loyalty: 0
-  relationship: -10
-  currentRoom: 5
+  mood: 75
+  loyalty: 51
+  relationship: 72
+  currentRoom: 2
   percentChanceRooms: 050000000a0000000a00000028000000000000001e00000005000000

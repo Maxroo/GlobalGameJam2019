@@ -23,6 +23,13 @@ public class CharacterManager : MonoBehaviour
         }
         instance = this;
         characterList = new FamilyCharacter[] { mother, father, sister, brother, dog };
+        //initialize character values
+        for (int i = 0; i < characterList.Length; ++i)
+        {
+            characterList[i].mood = Random.Range(ConstantsManager.kMinInitialStat, ConstantsManager.kMaxInitialStat);
+            characterList[i].loyalty = Random.Range(ConstantsManager.kMinInitialStat, ConstantsManager.kMaxInitialStat);
+            characterList[i].relationship = Random.Range(ConstantsManager.kMinInitialStat, ConstantsManager.kMaxInitialStat);
+        }
     }
 
     public FamilyCharacter[] GetCharacters()
