@@ -16,9 +16,14 @@ public class BackgroundManager : MonoBehaviour
     }
 
     public static BackgroundManager instance;
+
+    public Image houseOverview;
+    public Image outside;
     public Image[] roomBackgrounds;
     CanvasGroup backgroundsCanvas;
     Image currentBackground;
+
+    public bool isInRoom = false;
 
     private void Awake() {
 
@@ -28,40 +33,42 @@ public class BackgroundManager : MonoBehaviour
         instance = this;
 
         backgroundsCanvas = GetComponent<CanvasGroup>();
-
+        checkIsInRoom();
     }
+
 
     public void ShowRoomBackground(RoomNames roomToShow){
         currentBackground = null;
-
+        isInRoom = true;
+        checkIsInRoom();
         switch(roomToShow){
 
             case BackgroundManager.RoomNames.LIVING_ROOM:
-            currentBackground = roomBackgrounds[0];
-            break;
-
-            case BackgroundManager.RoomNames.BATHROOM:
             currentBackground = roomBackgrounds[1];
             break;
 
-            case BackgroundManager.RoomNames.KITCHEN:
+            case BackgroundManager.RoomNames.BATHROOM:
             currentBackground = roomBackgrounds[2];
             break;
 
+            case BackgroundManager.RoomNames.KITCHEN:
+            currentBackground = roomBackgrounds[0];
+            break;
+
             case BackgroundManager.RoomNames.GAME_ROOM:
-            currentBackground = roomBackgrounds[3];
-            break;
-
-            case BackgroundManager.RoomNames.SUN_ROOM:
-            currentBackground = roomBackgrounds[4];
-            break;
-
-            case BackgroundManager.RoomNames.PARENT_BEDROOM:
             currentBackground = roomBackgrounds[5];
             break;
 
-            case BackgroundManager.RoomNames.KID_BEDROOM:
+            case BackgroundManager.RoomNames.SUN_ROOM:
             currentBackground = roomBackgrounds[6];
+            break;
+
+            case BackgroundManager.RoomNames.PARENT_BEDROOM:
+            currentBackground = roomBackgrounds[3];
+            break;
+
+            case BackgroundManager.RoomNames.KID_BEDROOM:
+            currentBackground = roomBackgrounds[4];
             break;
             
         }
@@ -80,8 +87,18 @@ public class BackgroundManager : MonoBehaviour
     }
 
     public void HideBackgroundsCanvas(){
-        backgroundsCanvas.alpha = 0;
     }
 
+
+    public void checkIsInRoom()
+    {
+        if(!isInRoom)
+        {
+            houseOverview.enabled = true;
+        }else
+        {
+            houseOverview.enabled = false;            
+        }
+    }
 
 }
