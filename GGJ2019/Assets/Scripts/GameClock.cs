@@ -20,7 +20,7 @@ public class GameClock : MonoBehaviour
         new TimeBlock(18, TimeOfDay.Evening, 2),
         new TimeBlock(20, TimeOfDay.Evening, 2),
         new TimeBlock(22, TimeOfDay.Evening, 2),
-        new TimeBlock(24, TimeOfDay.Evening, 8)
+        new TimeBlock(24, TimeOfDay.Night, 8)
     };
 
     private TimeOfDay lastTOD = TimeOfDay.Morning;
@@ -96,7 +96,7 @@ public class GameClock : MonoBehaviour
     private int GetNextIndexInSequence(int i)
     {
         int rtn = i+1;
-        if (i >= dayCycle.Length)
+        if (rtn >= dayCycle.Length)
         {
             rtn = 0;
         }
