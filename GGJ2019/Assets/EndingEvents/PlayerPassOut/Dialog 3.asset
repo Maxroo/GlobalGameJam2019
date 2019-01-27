@@ -26,6 +26,7 @@ MonoBehaviour:
   familyStat: 0
   familyMemberToAffect: 0
   playerStat: 0
-  isEnd: 0
+  isEnd: 1
   familyStatAmount: 0
   playerStatAmount: 0
+  insertEndingScene: 

@@ -921,10 +921,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac022d54afdd9a34a87caa6ba96e0903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mood: 80
-  charisma: 90
-  knowledge: 80
-  energy: 95
 --- !u!225 &109136725
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1068,7 +1064,7 @@ MonoBehaviour:
   roomSceneName: BathRoom
   roomActions:
   - Take Shower
-  roomType: 3
+  roomType: 4
 --- !u!114 &111354622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1465,7 +1461,7 @@ MonoBehaviour:
   roomActions:
   - Sit and Rest
   - Read a Book
-  roomType: 0
+  roomType: 1
 --- !u!114 &211622506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1982,8 +1978,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 270573913}
-  - component: {fileID: 270573915}
   - component: {fileID: 270573914}
+  - component: {fileID: 270573915}
   m_Layer: 5
   m_Name: Sister
   m_TagString: Untagged
@@ -2039,9 +2035,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 270573912}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea70776d51e89c04284aa4a03c126651, type: 3}
+  m_Script: {fileID: 11500000, guid: 714e7e6fca9cea74682c478c6ac735a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 241cc4e0866e32c48bfe746b525b8e77, type: 2}
+  mood: 50
+  loyalty: 50
+  relationship: 50
 --- !u!1 &316700757
 GameObject:
   m_ObjectHideFlags: 0
@@ -3580,6 +3580,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3604,7 +3605,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac022d54afdd9a34a87caa6ba96e0903, type: 3}
+  m_Script: {fileID: 11500000, guid: b5247f146da130e418938c5104c26798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mood: 0
@@ -3667,6 +3668,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ade111cc93e4da43a435876853065fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  majorEventNames: []
 --- !u!1 &526280879
 GameObject:
   m_ObjectHideFlags: 0
@@ -4852,8 +4866,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 700418049}
-  - component: {fileID: 700418051}
   - component: {fileID: 700418050}
+  - component: {fileID: 700418051}
   m_Layer: 5
   m_Name: Brother
   m_TagString: Untagged
@@ -4909,9 +4923,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 700418048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea70776d51e89c04284aa4a03c126651, type: 3}
+  m_Script: {fileID: 11500000, guid: 714e7e6fca9cea74682c478c6ac735a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 1bb25eb28e9228c4280b197d66d0050d, type: 2}
+  mood: 50
+  loyalty: 50
+  relationship: 50
 --- !u!1 &706069279
 GameObject:
   m_ObjectHideFlags: 0
@@ -5365,8 +5383,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 805154142}
-  - component: {fileID: 805154144}
   - component: {fileID: 805154143}
+  - component: {fileID: 805154144}
   m_Layer: 5
   m_Name: Father
   m_TagString: Untagged
@@ -5422,9 +5440,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 805154141}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea70776d51e89c04284aa4a03c126651, type: 3}
+  m_Script: {fileID: 11500000, guid: 714e7e6fca9cea74682c478c6ac735a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 431371ab18f8f804cb2484efe4914b4a, type: 2}
+  mood: 50
+  loyalty: 50
+  relationship: 50
 --- !u!1 &825495398
 GameObject:
   m_ObjectHideFlags: 0
@@ -6326,7 +6348,7 @@ MonoBehaviour:
   roomActions:
   - Play a Game
   - Watch a Movie
-  roomType: 5
+  roomType: 6
 --- !u!114 &965106544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7165,7 +7187,7 @@ MonoBehaviour:
   roomActions:
   - Look at photobooks
   - Sleep on parent's bed
-  roomType: 1
+  roomType: 2
 --- !u!114 &1076283860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7536,8 +7558,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1192370006}
-  - component: {fileID: 1192370008}
   - component: {fileID: 1192370007}
+  - component: {fileID: 1192370008}
   m_Layer: 5
   m_Name: Mother
   m_TagString: Untagged
@@ -7593,9 +7615,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1192370005}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea70776d51e89c04284aa4a03c126651, type: 3}
+  m_Script: {fileID: 11500000, guid: 714e7e6fca9cea74682c478c6ac735a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: b13abd3aed42d464e882dfa871c81d68, type: 2}
+  mood: 50
+  loyalty: 50
+  relationship: 50
 --- !u!1 &1201685600
 GameObject:
   m_ObjectHideFlags: 0
@@ -7993,7 +8019,7 @@ MonoBehaviour:
   roomActions:
   - Clean the Dishes
   - Cook Food
-  roomType: 4
+  roomType: 5
 --- !u!114 &1235693047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8647,7 +8673,7 @@ MonoBehaviour:
   roomActions:
   - Pet Dog
   - Bask in the sun
-  roomType: 6
+  roomType: 7
 --- !u!114 &1349558348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10779,7 +10805,7 @@ MonoBehaviour:
   roomActions:
   - Sleep on your Bed
   - Rummage Through Stuff
-  roomType: 2
+  roomType: 3
 --- !u!114 &1729644896
 MonoBehaviour:
   m_ObjectHideFlags: 0

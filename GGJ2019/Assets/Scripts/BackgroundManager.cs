@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class BackgroundManager : MonoBehaviour
 {
     public enum RoomNames{
+        NONE,
         LIVING_ROOM,
         PARENT_BEDROOM,
         KID_BEDROOM,
