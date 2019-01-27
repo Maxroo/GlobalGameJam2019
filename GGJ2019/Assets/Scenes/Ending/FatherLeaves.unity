@@ -508,7 +508,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d090504023f7cdf46887b952d18ec987, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -683,12 +683,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventArray:
-  - {fileID: 11400000, guid: f77e0db672daf5142b9f9c670d87f267, type: 2}
-  - {fileID: 11400000, guid: da7a423eb63360041a00dc4db946f931, type: 2}
-  - {fileID: 11400000, guid: 9b54a9a1d46f3414ba0d6ed96721fb9f, type: 2}
-  - {fileID: 11400000, guid: b8821cfb24648e246a1ff74a5da796a7, type: 2}
-  - {fileID: 11400000, guid: 883a31087ca89534d8efacf48b26fcd6, type: 2}
-  - {fileID: 11400000, guid: 5170309b93bc1ad478162ff658b5d08f, type: 2}
+  - {fileID: 11400000, guid: 6cba6fa20632d7f4c8c7362b73a42808, type: 2}
+  - {fileID: 11400000, guid: 9b1b7cf431ca21443b1aac595c762759, type: 2}
+  - {fileID: 11400000, guid: de1ddfc23b6a1c644bc3fcf75428120e, type: 2}
+  - {fileID: 11400000, guid: b6f2c5dd45433904a8f2196fe01f4947, type: 2}
 --- !u!1 &944541383
 GameObject:
   m_ObjectHideFlags: 0
