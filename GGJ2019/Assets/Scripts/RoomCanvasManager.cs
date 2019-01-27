@@ -44,6 +44,8 @@ public class RoomCanvasManager : MonoBehaviour
 
     }
 
+
+
     public void HideRoom(){
         roomCanvas.interactable = false;
         roomCanvas.blocksRaycasts = false;

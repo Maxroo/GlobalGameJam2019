@@ -25,6 +25,13 @@ public class EventAction : ScriptableObject
 
     }
 
+    public enum MusicChoices{
+        NEUTRAL,
+        POSITIVE,
+        NEGATIVE,
+        INTENSE
+    }
+
     public enum TimeRequirement{
 
         Morning,
@@ -57,10 +64,16 @@ public class EventAction : ScriptableObject
 
 
     public bool isEnd;
+    public bool moveTime;
 
 
     public int familyStatAmount;
     public int playerStatAmount;
+
+    public BackgroundManager.RoomNames backgroundToLoad;
+
+    public bool changeMusic;
+    public MusicChoices musicToSet;
 
   
 

@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8df188f6938ca44ea3acf9d9c1b4243, type: 3}
-  m_Name: Bask5
+  m_Name: Games 7
   m_EditorClassIdentifier: 
   timeRequirement: 4
   LeftCharacter: 0
   RightCharacter: 0
-  dialogText: '...but -5 mood'
+  dialogText: Sister -5 relationship
   showChoices: 0
   choice1Text: 
   choice2Text: 
@@ -23,10 +23,9 @@ MonoBehaviour:
   secondButtonTargetEvent: 0
   showLeftName: 0
   showRightName: 0
-  familyStat: 0
-  familyMemberToAffect: 0
+  familyStat: 3
+  familyMemberToAffect: 4
   playerStat: 1
-  isEnd: 1
-  moveTime: 1
-  familyStatAmount: 0
-  playerStatAmount: -5
+  isEnd: 0
+  familyStatAmount: -5
+  playerStatAmount: 0

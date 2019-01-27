@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8df188f6938ca44ea3acf9d9c1b4243, type: 3}
-  m_Name: Bask5
+  m_Name: Games 2
   m_EditorClassIdentifier: 
   timeRequirement: 4
   LeftCharacter: 0
-  RightCharacter: 0
-  dialogText: '...but -5 mood'
+  RightCharacter: 3
+  dialogText: The only way you get better is to face dificulty head on.
   showChoices: 0
   choice1Text: 
   choice2Text: 
@@ -25,8 +25,7 @@ MonoBehaviour:
   showRightName: 0
   familyStat: 0
   familyMemberToAffect: 0
-  playerStat: 1
-  isEnd: 1
-  moveTime: 1
+  playerStat: 0
+  isEnd: 0
   familyStatAmount: 0
-  playerStatAmount: -5
+  playerStatAmount: 0

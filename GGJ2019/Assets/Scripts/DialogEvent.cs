@@ -10,6 +10,7 @@ public class DialogEvent : MonoBehaviour
     private bool spriteOutOnRight;
 
     bool isNextEnd;
+    bool isMoveTime;
 
     private DialogCanvasManager.CharactersToShow characterOnRight;
     private DialogCanvasManager.CharactersToShow characterOnLeft;
@@ -115,6 +116,10 @@ public class DialogEvent : MonoBehaviour
 
             isNextEnd = true;
             
+        }
+        if(currentAction.moveTime){
+
+            isMoveTime = true;
 
         }
         
@@ -191,7 +196,9 @@ public class DialogEvent : MonoBehaviour
     private void Update() {
         if(Input.GetMouseButtonDown(0) && isNextEnd){
 
-            GameClock.Instance.GoToNextSegment();
+            if(isMoveTime){
+                GameClock.Instance.GoToNextSegment();
+            }
             BackgroundManager.instance.isInRoom = false;
             BackgroundManager.instance.checkIsInRoom();
             HouseManager.instance.ShowHouse();
@@ -206,7 +213,12 @@ public class DialogEvent : MonoBehaviour
     }
 
     private void Start() {
+
         NextAction(0);
+        if(eventArray[0].backgroundToLoad != BackgroundManager.RoomNames.NONE){
+            BackgroundManager.instance.ShowRoomBackground(eventArray[0].backgroundToLoad);
+        }
+
     }
 
 
