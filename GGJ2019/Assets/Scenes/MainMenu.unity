@@ -563,7 +563,9 @@ MonoBehaviour:
   possitiveMusic: {fileID: 8300000, guid: 6310633d88f388f4092ef58a3e7840b4, type: 3}
   negativeMusic: {fileID: 8300000, guid: b597f0212f8cd8f4ea4d61fed7a5f5c5, type: 3}
   intenseMusic: {fileID: 8300000, guid: df00b7a1e1f21a946b6121ed768bd787, type: 3}
-  clickingSFX: {fileID: 8300000, guid: 542758f03cc5e29499031546b032518f, type: 3}
+  clickingSFX: {fileID: 8300000, guid: 2d6eb3fce5786354085411d82fbbfb83, type: 3}
+  positiveSFX: {fileID: 8300000, guid: 7d9f18b9543ef5d4d82f457aa2250f2f, type: 3}
+  negativeSFX: {fileID: 8300000, guid: 13ebaf2d1ba1e6d489a63a5d9fb5f409, type: 3}
   audioSourceRef: {fileID: 1229885921}
   audioSFXRef: {fileID: 1229885920}
 --- !u!4 &1229885923
