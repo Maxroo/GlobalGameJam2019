@@ -15,12 +15,12 @@ MonoBehaviour:
   timeRequirement: 4
   LeftCharacter: 0
   RightCharacter: 0
-  dialogText: You wake up, and follow the sound to find your dog
+  dialogText: You and your brother to the game gem together!
   showChoices: 0
   choice1Text: 
   choice2Text: 
-  firstButtonTargetEvent: 2
-  secondButtonTargetEvent: 3
+  firstButtonTargetEvent: 0
+  secondButtonTargetEvent: 0
   showLeftName: 0
   showRightName: 0
   familyStat: 0
