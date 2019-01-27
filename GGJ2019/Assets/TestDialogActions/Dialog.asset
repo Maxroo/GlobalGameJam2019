@@ -13,12 +13,17 @@ MonoBehaviour:
   m_Name: Dialog
   m_EditorClassIdentifier: 
   LeftCharacter: 0
-  RightCharacter: 5
-  dialogText: Hello, this is a test prompt!
-  showChoices: 1
+  RightCharacter: 0
+  dialogText: Person did this thing.
+  showChoices: 0
   choice1Text: Fourth Event
   choice2Text: Fifth Event
   firstButtonTargetEvent: 3
   secondButtonTargetEvent: 4
   showLeftName: 0
   showRightName: 0
+  familyStat: 0
+  familyMemberToAffect: 0
+  playerStat: 0
+  familyStatAmount: 10
+  playerStatAmount: 0

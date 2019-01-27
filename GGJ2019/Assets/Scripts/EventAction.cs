@@ -6,6 +6,24 @@ using UnityEditor;
 [CreateAssetMenu(fileName = "Dialog", menuName = "SceneEvents", order = 1)]
 public class EventAction : ScriptableObject
 {
+    public enum FamilyStatToModify{
+
+        NONE,
+        MOOD,
+        LOYALTY,
+        RELATIONSHIP
+
+    }
+
+    public enum PlayerStatToModify{
+
+        NONE,
+        MOOD,
+        CHARISMA,
+        KNOWLEDGE,
+        ENERGY
+
+    }
     
     public DialogCanvasManager.CharactersToShow LeftCharacter;
     public DialogCanvasManager.CharactersToShow RightCharacter;
@@ -21,7 +39,17 @@ public class EventAction : ScriptableObject
     public bool showLeftName;
     public bool showRightName;
 
-     public static void CreateMyAsset()
+    public FamilyStatToModify familyStat = FamilyStatToModify.NONE;
+    public DialogCanvasManager.CharactersToShow familyMemberToAffect;
+    public PlayerStatToModify playerStat = PlayerStatToModify.NONE;
+
+    bool isEnd;
+
+    public int familyStatAmount;
+    public int playerStatAmount;
+
+
+    public static void CreateMyAsset()
     {
         EventAction asset = ScriptableObject.CreateInstance<EventAction>();
 
