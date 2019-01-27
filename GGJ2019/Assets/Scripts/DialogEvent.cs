@@ -189,7 +189,7 @@ public class DialogEvent : MonoBehaviour
     }
 
     private void Update() {
-        if(Input.GetMouseButtonUp(0) && isNextEnd){
+        if(Input.GetMouseButtonDown(0) && isNextEnd){
 
             GameClock.Instance.GoToNextSegment();
             BackgroundManager.instance.isInRoom = false;
@@ -198,7 +198,7 @@ public class DialogEvent : MonoBehaviour
             RoomCanvasManager.instance.HideRoom();
             SceneManager.UnloadSceneAsync(gameObject.scene);
 
-        }else if(Input.GetMouseButtonUp(0) && actionNumber < eventArray.Length && !DialogCanvasManager.instance.isInChoice){
+        }else if(Input.GetMouseButtonDown(0) && actionNumber < eventArray.Length && !DialogCanvasManager.instance.isInChoice){
 
             actionNumber++;
             NextAction(actionNumber);
