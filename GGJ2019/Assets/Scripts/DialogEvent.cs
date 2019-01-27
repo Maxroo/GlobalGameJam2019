@@ -15,11 +15,12 @@ public class DialogEvent : MonoBehaviour
 
     private int actionNumber = 0;
 
-    public void NextAction(){
+    public void NextAction(int nextAction){
 
         DialogCanvasManager.instance.dialogBackground.gameObject.SetActive(true);
 
-        EventAction currentAction = eventArray[actionNumber];
+        EventAction currentAction = eventArray[nextAction];
+        actionNumber = nextAction;
 
         if(currentAction.LeftCharacter != DialogCanvasManager.CharactersToShow.NONE){
 
@@ -91,15 +92,20 @@ public class DialogEvent : MonoBehaviour
         } else if(spriteOutOnRight && currentAction.showRightName){
             DialogCanvasManager.instance.ShowRightDialogBox(currentAction.RightCharacter);
         }
+
+        if(currentAction.showChoices){
+            DialogCanvasManager.instance.ShowButtonChoices(currentAction.choice1Text, currentAction.choice2Text, currentAction.firstButtonTargetEvent, currentAction.secondButtonTargetEvent);
+        }
             
         DialogCanvasManager.instance.ShowEventDialog(currentAction.dialogText);
-        actionNumber++;
+        
 
     }
 
     private void Update() {
-        if(Input.GetMouseButtonUp(0) && actionNumber < eventArray.Length){
-            NextAction();
+        if(Input.GetMouseButtonUp(0) && actionNumber < eventArray.Length && !DialogCanvasManager.instance.isInChoice){
+            NextAction(actionNumber);
+            actionNumber++;
         }
     }
 

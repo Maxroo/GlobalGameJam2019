@@ -17,8 +17,8 @@ public class DialogCanvasManager : MonoBehaviour
     }
 
     [Header("Buttons")]
-    public Button FirstOption;
-    public Button SecondOption;
+    public Button firstOption;
+    public Button secondOption;
 
     [Header("Images")]
    public Image leftDialogBox;
@@ -30,15 +30,22 @@ public class DialogCanvasManager : MonoBehaviour
    public Text rightDialogName;
    public Text dialogText;
    public Text firstButtonText;
+   public Text secondButtonText;
 
    [Header("CharacterSprites")]
    public Image momSprite;
    public Image dadSprite;
    public Image sisSprite;
    public Image broSprite;
-
    private Image leftSprite;
    private Image rightSprite;
+
+   [Header("Other")]
+   public CanvasGroup buttonGroup;
+   public bool isInChoice;
+   private int targetEventLeft;
+   private int targetEventRight;
+   public DialogEvent dialogEventRef;
 
    private void Awake() {
 
@@ -47,6 +54,13 @@ public class DialogCanvasManager : MonoBehaviour
        }
        instance = this;
 
+   }
+
+   private void Start() {
+       
+        firstOption.onClick.AddListener(FirstButtonListener);
+        secondOption.onClick.AddListener(SecondButtonListener);
+       
    }
 
    public void ShowLeftDialogBox(CharactersToShow character){
@@ -153,8 +167,6 @@ public class DialogCanvasManager : MonoBehaviour
 
    }
 
-
-
     public void ShowCharacterRight(CharactersToShow character){
 
        Image spriteToShow = null;
@@ -185,8 +197,6 @@ public class DialogCanvasManager : MonoBehaviour
         }
    }
 
-  
-
    public void HideCharacterLeft(){
        leftSprite.gameObject.GetComponent<SpriteMovement>().MoveOutLeft();
 
@@ -197,6 +207,48 @@ public class DialogCanvasManager : MonoBehaviour
 
             rightSprite.gameObject.GetComponent<SpriteMovement>().MoveOutRight();
         }
+
+    }
+
+    public void ShowButtonChoices(string firstOptionText, string secondOptionText, int nextEventLeft, int nextEventRight){
+        buttonGroup.alpha = 1;
+
+        buttonGroup.interactable = true;
+        buttonGroup.blocksRaycasts = true;
+
+        isInChoice = true;
+
+        firstButtonText.text = firstOptionText;
+        secondButtonText.text = secondOptionText;
+
+        targetEventLeft = nextEventLeft;
+        targetEventRight = nextEventRight;
+
+        firstOption.onClick.AddListener(FirstButtonListener);
+        secondOption.onClick.AddListener(SecondButtonListener);
+
+    }
+
+    public void HideButtonChoices(){
+        buttonGroup.alpha = 0;
+
+        buttonGroup.interactable = false;
+        buttonGroup.blocksRaycasts = false;
+
+    }
+
+    public void FirstButtonListener(){
+        dialogEventRef.NextAction(targetEventLeft);
+        HideButtonChoices();
+        isInChoice = false;
+
+
+    }
+    
+    public void SecondButtonListener(){
+        dialogEventRef.NextAction(targetEventRight);
+        HideButtonChoices();
+        isInChoice = false;
 
     }
 

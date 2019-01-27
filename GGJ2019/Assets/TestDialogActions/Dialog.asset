@@ -15,8 +15,10 @@ MonoBehaviour:
   LeftCharacter: 0
   RightCharacter: 5
   dialogText: Hello, this is a test prompt!
-  showChoices: 0
-  choice1Text: 
-  coice2Text: 
+  showChoices: 1
+  choice1Text: Fourth Event
+  choice2Text: Fifth Event
+  firstButtonTargetEvent: 3
+  secondButtonTargetEvent: 4
   showLeftName: 0
   showRightName: 0
