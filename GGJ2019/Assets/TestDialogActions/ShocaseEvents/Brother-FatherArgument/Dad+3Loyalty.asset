@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8df188f6938ca44ea3acf9d9c1b4243, type: 3}
-  m_Name: Dialog
+  m_Name: Dad+3Loyalty
   m_EditorClassIdentifier: 
   LeftCharacter: 0
   RightCharacter: 0
-  dialogText: Person did this thing.
+  dialogText: '...but gets +3 loyalty.'
   showChoices: 0
-  choice1Text: Fourth Event
-  choice2Text: Fifth Event
-  firstButtonTargetEvent: 3
-  secondButtonTargetEvent: 4
+  choice1Text: 
+  choice2Text: 
+  firstButtonTargetEvent: 0
+  secondButtonTargetEvent: 0
   showLeftName: 0
   showRightName: 0
-  familyStat: 0
-  familyMemberToAffect: 0
+  familyStat: 2
+  familyMemberToAffect: 2
   playerStat: 0
-  familyStatAmount: 10
+  familyStatAmount: 5
   playerStatAmount: 0

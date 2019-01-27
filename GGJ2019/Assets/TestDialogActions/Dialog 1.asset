@@ -13,8 +13,17 @@ MonoBehaviour:
   m_Name: Dialog 1
   m_EditorClassIdentifier: 
   LeftCharacter: 0
-  RightCharacter: 5
-  dialogText: I'll keep talking for more stuff.
+  RightCharacter: 0
+  dialogText: Person Lost 5 Whatever
   showChoices: 0
   choice1Text: 
-  coice2Text: 
+  choice2Text: 
+  firstButtonTargetEvent: 0
+  secondButtonTargetEvent: 0
+  showLeftName: 0
+  showRightName: 0
+  familyStat: 0
+  familyMemberToAffect: 0
+  playerStat: 0
+  familyStatAmount: 10
+  playerStatAmount: 0
