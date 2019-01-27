@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8df188f6938ca44ea3acf9d9c1b4243, type: 3}
-  m_Name: Dialog
+  m_Name: Opening 2
   m_EditorClassIdentifier: 
   timeRequirement: 4
   LeftCharacter: 0
   RightCharacter: 0
-  dialogText: You left the refrigerator open...
+  dialogText: 
   showChoices: 0
   choice1Text: 
   choice2Text: 
@@ -30,8 +30,8 @@ MonoBehaviour:
   moveTime: 0
   familyStatAmount: 0
   playerStatAmount: 0
-  loadEndingScene: 0
-  backgroundToLoad: 5
+  loadEndingScene: 1
+  backgroundToLoad: 0
   changeMusic: 0
   musicToSet: 0
-  insertEndingScene: 
+  insertEndingScene: GameUI

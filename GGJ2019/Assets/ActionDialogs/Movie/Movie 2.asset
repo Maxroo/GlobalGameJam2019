@@ -27,7 +27,12 @@ MonoBehaviour:
   familyStat: 0
   familyMemberToAffect: 0
   playerStat: 4
-  isEnd: 0
+  isEnd: 1
   moveTime: 1
   familyStatAmount: 0
   playerStatAmount: 7
+  loadEndingScene: 0
+  backgroundToLoad: 0
+  changeMusic: 0
+  musicToSet: 0
+  insertEndingScene: 

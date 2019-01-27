@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8df188f6938ca44ea3acf9d9c1b4243, type: 3}
   m_Name: ArgumentDialog1
   m_EditorClassIdentifier: 
+  timeRequirement: 4
   LeftCharacter: 0
   RightCharacter: 0
   dialogText: As you walk by the kitchen you overhear your brother vehemently arguing
@@ -26,5 +27,12 @@ MonoBehaviour:
   familyStat: 0
   familyMemberToAffect: 0
   playerStat: 0
+  isEnd: 0
+  moveTime: 0
   familyStatAmount: 0
   playerStatAmount: 0
+  loadEndingScene: 0
+  backgroundToLoad: 2
+  changeMusic: 0
+  musicToSet: 0
+  insertEndingScene: 
