@@ -6,6 +6,12 @@ using UnityEngine.UI;
 
 public class GameClock : MonoBehaviour
 {
+    public static GameClock Instance
+    {
+        get { return _instance; }
+    }
+    private static GameClock _instance;
+
 	public Text timeText;
 	public Text dayText;
     public int startTime = 8;
@@ -30,8 +36,17 @@ public class GameClock : MonoBehaviour
     //--------------------------------------------------Unity Methods--------------------------------------------------
     void Awake()
     {
-        //On game 
-        restartClock();
+        if (_instance != null)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+            //On game 
+            restartClock();
+        }
+        
         
     }
 
@@ -39,9 +54,9 @@ public class GameClock : MonoBehaviour
     void Update()
     {
 
-		if (Input.GetKeyDown (KeyCode.Space)) {
-			GoToNextSegment ();
-		}
+		//if (Input.GetKeyDown (KeyCode.Space)) {
+		//	GoToNextSegment ();
+		//}
     }
 
     //--------------------------------------------------Public Methods--------------------------------------------------
@@ -70,14 +85,13 @@ public class GameClock : MonoBehaviour
         }
 
         //Update UI
-        timeText.text = GetCurrentTimeString();
-		dayText.text = GetCurrentDayString ();
+        updateDisplay();
         //return if is out of time
         return (currentTime >= (numberOfDays*24));   
     }
 
 	public string GetCurrentDayString(){
-		string rtn = "Day " + (Mathf.FloorToInt(currentTime/24)+1);
+		string rtn = "Day " + (Mathf.FloorToInt(currentTime/24)+1) + " of " + numberOfDays;
 //		Debug.Log (rtn);
 		return rtn;
 	}
@@ -107,8 +121,15 @@ public class GameClock : MonoBehaviour
     {
         currentTime = startTime;
         SetCurrentTimeBlock();
+        updateDisplay();
         
         Debug.Log("Clock restarted: " + GetCurrentTimeString());
+    }
+
+    private void updateDisplay()
+    {
+        timeText.text = GetCurrentTimeString();
+        dayText.text = GetCurrentDayString();
     }
 
     private void SetCurrentTimeBlock()

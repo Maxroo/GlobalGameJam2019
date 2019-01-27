@@ -61,10 +61,12 @@ public class EventAction : ScriptableObject
 
     public bool isEnd;
 
+
     public int familyStatAmount;
     public int playerStatAmount;
 
     public string insertEndingScene;
+
 
     public static void CreateMyAsset()
     {
