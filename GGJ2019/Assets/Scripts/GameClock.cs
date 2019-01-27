@@ -141,5 +141,5 @@ public class TimeBlock
     public TimeBlock(int t, TimeOfDay tod, int hrs) { TOD = tod; time = t; Hours = hrs; }
 }
 
-public enum TimeOfDay { Morning, Afternoon, Evening, Night };
+public enum TimeOfDay { Morning, Afternoon, Evening, Night};
 
