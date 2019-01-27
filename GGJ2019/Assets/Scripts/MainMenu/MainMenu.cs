@@ -1,16 +1,16 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenuButton : MonoBehaviour
-{   
 
-
+public class MainMenu : MonoBehaviour
+{
+    
+    
     // Start is called before the first frame update
     void Start()
     {
-        
         
     }
 
@@ -20,7 +20,8 @@ public class MainMenuButton : MonoBehaviour
         
     }
 
-    public void onPlayButoonClicked()
+    public void onPlayClicked()
     {
+        SceneManager.LoadScene("GameUI");
     }
 }

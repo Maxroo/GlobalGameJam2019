@@ -24,7 +24,18 @@ public class EventAction : ScriptableObject
         ENERGY
 
     }
+
+    public enum TimeRequirement{
+
+        Morning,
+        Afternoon,
+        Noon,
+        Night,
+        Anytime
+
+    }
     
+    public TimeRequirement timeRequirement = TimeRequirement.Anytime;
     public DialogCanvasManager.CharactersToShow LeftCharacter;
     public DialogCanvasManager.CharactersToShow RightCharacter;
     public string dialogText;
@@ -39,9 +50,11 @@ public class EventAction : ScriptableObject
     public bool showLeftName;
     public bool showRightName;
 
+
     public FamilyStatToModify familyStat = FamilyStatToModify.NONE;
     public DialogCanvasManager.CharactersToShow familyMemberToAffect;
     public PlayerStatToModify playerStat = PlayerStatToModify.NONE;
+
 
     bool isEnd;
 
