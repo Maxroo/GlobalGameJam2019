@@ -14,6 +14,9 @@ public class CharacterManager : MonoBehaviour
 
     private FamilyCharacter[] characterList;
 
+    public delegate void NewShuffle();
+    public static event NewShuffle OnCharactersShuffled;
+
     public Dictionary<Room, int> roomCaps = new Dictionary<Room, int>() { { Room.Kitchen, 2},{ Room.LivingRoom,2},{ Room.SunRoom,2},{ Room.KidsBedroom,2},{ Room.AdultsBedroom,2},{ Room.GameRoom,2},{ Room.Bathroom, 1} };
 
 
@@ -156,6 +159,8 @@ public class CharacterManager : MonoBehaviour
             str += (characterList[i].charName + ": " + characterList[i].currentRoom + "\n");
         }
         Debug.Log(str);
+
+        OnCharactersShuffled();
 
     }
 
