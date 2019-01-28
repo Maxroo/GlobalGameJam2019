@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8df188f6938ca44ea3acf9d9c1b4243, type: 3}
-  m_Name: Dialog 4
+  m_Name: Good
   m_EditorClassIdentifier: 
   timeRequirement: 4
   LeftCharacter: 0
   RightCharacter: 0
-  dialogText: '"...except the dog. I''ll miss you, buddy."'
+  dialogText: And so, the weekend had come to an end. You prepare to head back to
+    your dorm.
   showChoices: 0
   choice1Text: 
   choice2Text: 

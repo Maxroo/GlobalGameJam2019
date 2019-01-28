@@ -235,7 +235,10 @@ public class DialogEvent : MonoBehaviour
             SceneManager.UnloadSceneAsync(gameObject.scene);
             
         }else if(Input.GetMouseButtonDown(0) && actionNumber < eventArray.Length && !DialogCanvasManager.instance.isInChoice){
-            AudioManager.instance.PlayClickSoundEffect();
+            if(AudioManager.instance != null){
+                
+                AudioManager.instance.PlayClickSoundEffect();
+            }
             actionNumber++;
             NextAction(actionNumber);
         }

@@ -688,6 +688,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bb7321c37bd6c0d44a6db199af68935a, type: 2}
   - {fileID: 11400000, guid: c81105bcc56e689408ab88eb88524bab, type: 2}
   - {fileID: 11400000, guid: ec57fb6376dfd504dbd7a2046231afb8, type: 2}
+  - {fileID: 11400000, guid: 5d7ef8e6474d4c14dacfbb1fa1774d93, type: 2}
 --- !u!1 &944541383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,6 +1244,7 @@ MonoBehaviour:
   father: {fileID: 11400000, guid: 431371ab18f8f804cb2484efe4914b4a, type: 2}
   sister: {fileID: 11400000, guid: 241cc4e0866e32c48bfe746b525b8e77, type: 2}
   brother: {fileID: 11400000, guid: 1bb25eb28e9228c4280b197d66d0050d, type: 2}
+  dog: {fileID: 0}
 --- !u!1 &1451334123
 GameObject:
   m_ObjectHideFlags: 0
