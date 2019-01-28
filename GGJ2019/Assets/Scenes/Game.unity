@@ -607,12 +607,12 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.502
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -942,7 +942,7 @@ GameObject:
   - component: {fileID: 80361304}
   - component: {fileID: 80361306}
   - component: {fileID: 80361305}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1555,7 +1555,7 @@ GameObject:
   - component: {fileID: 197084971}
   - component: {fileID: 197084973}
   - component: {fileID: 197084972}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Option4Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1636,7 +1636,7 @@ GameObject:
   - component: {fileID: 205529472}
   - component: {fileID: 205529474}
   - component: {fileID: 205529473}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Energy Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1887,7 +1887,7 @@ GameObject:
   - component: {fileID: 224868832}
   - component: {fileID: 224868834}
   - component: {fileID: 224868833}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Relationship Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1966,7 +1966,7 @@ GameObject:
   - component: {fileID: 226071200}
   - component: {fileID: 226071202}
   - component: {fileID: 226071201}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2045,7 +2045,7 @@ GameObject:
   - component: {fileID: 235247909}
   - component: {fileID: 235247911}
   - component: {fileID: 235247910}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Mood Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2124,7 +2124,7 @@ GameObject:
   - component: {fileID: 237474803}
   - component: {fileID: 237474805}
   - component: {fileID: 237474804}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Option2Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2279,7 +2279,7 @@ GameObject:
   - component: {fileID: 256053791}
   - component: {fileID: 256053793}
   - component: {fileID: 256053792}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3004,7 +3004,7 @@ GameObject:
   - component: {fileID: 348134435}
   - component: {fileID: 348134437}
   - component: {fileID: 348134436}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3051,11 +3051,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: d090504023f7cdf46887b952d18ec987, type: 3}
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -3360,7 +3360,7 @@ GameObject:
   - component: {fileID: 388975316}
   - component: {fileID: 388975318}
   - component: {fileID: 388975317}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Relationship Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3518,7 +3518,7 @@ GameObject:
   - component: {fileID: 390358026}
   - component: {fileID: 390358028}
   - component: {fileID: 390358027}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Relationship Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3716,7 +3716,7 @@ GameObject:
   - component: {fileID: 433266636}
   - component: {fileID: 433266638}
   - component: {fileID: 433266637}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Relationship Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4624,10 +4624,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5247f146da130e418938c5104c26798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mood: 0
-  charisma: 0
-  knowledge: 0
-  energy: 0
+  mood: 80
+  charisma: 80
+  knowledge: 80
+  energy: 80
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -4893,7 +4893,7 @@ GameObject:
   - component: {fileID: 531050559}
   - component: {fileID: 531050561}
   - component: {fileID: 531050560}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Mood Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5302,7 +5302,7 @@ GameObject:
   - component: {fileID: 584650260}
   - component: {fileID: 584650262}
   - component: {fileID: 584650261}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: KidBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5381,7 +5381,7 @@ GameObject:
   - component: {fileID: 595710681}
   - component: {fileID: 595710683}
   - component: {fileID: 595710682}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5825,7 +5825,7 @@ GameObject:
   - component: {fileID: 674455173}
   - component: {fileID: 674455175}
   - component: {fileID: 674455174}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Option3Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6302,7 +6302,7 @@ GameObject:
   - component: {fileID: 739996432}
   - component: {fileID: 739996434}
   - component: {fileID: 739996433}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Quit game Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6811,7 +6811,7 @@ GameObject:
   - component: {fileID: 825495399}
   - component: {fileID: 825495401}
   - component: {fileID: 825495400}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7005,7 +7005,7 @@ GameObject:
   - component: {fileID: 846652211}
   - component: {fileID: 846652213}
   - component: {fileID: 846652212}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7424,7 +7424,7 @@ GameObject:
   - component: {fileID: 898318884}
   - component: {fileID: 898318883}
   - component: {fileID: 898318882}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: RoomNameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7813,7 +7813,7 @@ GameObject:
   - component: {fileID: 951928840}
   - component: {fileID: 951928842}
   - component: {fileID: 951928841}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Mood Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7981,7 +7981,7 @@ GameObject:
   - component: {fileID: 959112332}
   - component: {fileID: 959112334}
   - component: {fileID: 959112333}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Loyalty Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8196,7 +8196,7 @@ GameObject:
   - component: {fileID: 970280942}
   - component: {fileID: 970280944}
   - component: {fileID: 970280943}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Option1Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8708,7 +8708,7 @@ GameObject:
   - component: {fileID: 1044327573}
   - component: {fileID: 1044327575}
   - component: {fileID: 1044327574}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8822,7 +8822,7 @@ GameObject:
   - component: {fileID: 1063409845}
   - component: {fileID: 1063409847}
   - component: {fileID: 1063409846}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Mood Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9168,7 +9168,7 @@ GameObject:
   - component: {fileID: 1108682653}
   - component: {fileID: 1108682655}
   - component: {fileID: 1108682654}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Loyalty Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9494,7 +9494,7 @@ GameObject:
   - component: {fileID: 1190462593}
   - component: {fileID: 1190462595}
   - component: {fileID: 1190462594}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9733,7 +9733,7 @@ GameObject:
   - component: {fileID: 1207577617}
   - component: {fileID: 1207577619}
   - component: {fileID: 1207577618}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Player Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9886,7 +9886,7 @@ GameObject:
   - component: {fileID: 1226928603}
   - component: {fileID: 1226928605}
   - component: {fileID: 1226928604}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Loyalty Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10496,7 +10496,7 @@ GameObject:
   - component: {fileID: 1243190573}
   - component: {fileID: 1243190575}
   - component: {fileID: 1243190574}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10905,7 +10905,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &1322940175
 RectTransform:
@@ -11014,7 +11014,7 @@ GameObject:
   - component: {fileID: 1345595822}
   - component: {fileID: 1345595824}
   - component: {fileID: 1345595823}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: ParentsBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11518,7 +11518,7 @@ GameObject:
   - component: {fileID: 1402966918}
   - component: {fileID: 1402966920}
   - component: {fileID: 1402966919}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Knowledge Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12003,7 +12003,7 @@ GameObject:
   - component: {fileID: 1463077893}
   - component: {fileID: 1463077895}
   - component: {fileID: 1463077894}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12355,7 +12355,7 @@ GameObject:
   - component: {fileID: 1533491581}
   - component: {fileID: 1533491583}
   - component: {fileID: 1533491582}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Player Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13257,7 +13257,7 @@ GameObject:
   - component: {fileID: 1635041356}
   - component: {fileID: 1635041358}
   - component: {fileID: 1635041357}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13681,7 +13681,7 @@ GameObject:
   - component: {fileID: 1678531896}
   - component: {fileID: 1678531898}
   - component: {fileID: 1678531897}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Mood Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13834,7 +13834,7 @@ GameObject:
   - component: {fileID: 1701492666}
   - component: {fileID: 1701492668}
   - component: {fileID: 1701492667}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15132,7 +15132,7 @@ GameObject:
   - component: {fileID: 1871143254}
   - component: {fileID: 1871143256}
   - component: {fileID: 1871143255}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: TimeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15211,7 +15211,7 @@ GameObject:
   - component: {fileID: 1889713446}
   - component: {fileID: 1889713448}
   - component: {fileID: 1889713447}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Loyalty Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15290,7 +15290,7 @@ GameObject:
   - component: {fileID: 1899122342}
   - component: {fileID: 1899122344}
   - component: {fileID: 1899122343}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Mood Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15404,7 +15404,7 @@ GameObject:
   - component: {fileID: 1908200212}
   - component: {fileID: 1908200214}
   - component: {fileID: 1908200213}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16189,7 +16189,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -16246,7 +16246,7 @@ GameObject:
   - component: {fileID: 2044178170}
   - component: {fileID: 2044178172}
   - component: {fileID: 2044178171}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16357,7 +16357,7 @@ GameObject:
   - component: {fileID: 2055086926}
   - component: {fileID: 2055086928}
   - component: {fileID: 2055086927}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: TimeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}

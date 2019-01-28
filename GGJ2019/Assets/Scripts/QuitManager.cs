@@ -9,6 +9,9 @@ public class QuitManager : MonoBehaviour {
     private void Start() {
         confirmationBtnCanvas = GetComponentInChildren<CanvasGroup>();
         confirmationBtnCanvas.alpha = 0;
+
+        confirmationBtnCanvas.interactable = false;
+        confirmationBtnCanvas.blocksRaycasts = false;
     }
     
     public void QuitGame() {
@@ -16,6 +19,8 @@ public class QuitManager : MonoBehaviour {
     }
 
     private void ShowConfirmationButtons() {
+        confirmationBtnCanvas.interactable = true;
+        confirmationBtnCanvas.blocksRaycasts = true;
         confirmationBtnCanvas.alpha = 1;
     }
 
@@ -25,5 +30,7 @@ public class QuitManager : MonoBehaviour {
 
     public void NoOptionSelect() {
         confirmationBtnCanvas.alpha = 0;
+        confirmationBtnCanvas.interactable = false;
+        confirmationBtnCanvas.blocksRaycasts = false;
     }
 }

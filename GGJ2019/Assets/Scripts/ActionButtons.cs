@@ -10,17 +10,17 @@ public class ActionButtons : ScriptableObject
     public string buttonText;
     public string actionSceneID;
 
-    public static void CreateMyAsset()
-    {
-        EventAction asset = ScriptableObject.CreateInstance<EventAction>();
+    //public static void CreateMyAsset()
+    //{
+    //    EventAction asset = ScriptableObject.CreateInstance<EventAction>();
 
-        AssetDatabase.CreateAsset(asset, "Assets/NewScripableObject.asset");
-        AssetDatabase.SaveAssets();
+    //    AssetDatabase.CreateAsset(asset, "Assets/NewScripableObject.asset");
+    //    AssetDatabase.SaveAssets();
 
-        EditorUtility.FocusProjectWindow();
+    //    EditorUtility.FocusProjectWindow();
 
-        Selection.activeObject = asset;
-    }
+    //    Selection.activeObject = asset;
+    //}
 
 
 

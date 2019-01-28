@@ -34,4 +34,4 @@ MonoBehaviour:
   backgroundToLoad: 0
   changeMusic: 0
   musicToSet: 0
-  insertEndingScene: GameUI
+  insertEndingScene: Game

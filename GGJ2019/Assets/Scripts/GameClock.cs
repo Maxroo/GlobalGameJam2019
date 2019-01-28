@@ -206,7 +206,7 @@ public class GameClock : MonoBehaviour
         {
             isEnd = true;
             //replace with win condition
-            SceneManager.LoadSceneAsync("PlayerLeaves");
+            SceneManager.LoadSceneAsync("GoodEnd");
         }
         return isEnd;
     }

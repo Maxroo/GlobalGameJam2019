@@ -9,8 +9,8 @@ public static class ConstantsManager
     public const int kFightThreshold = 40;
     public const int kArgueThreshold = 50;
     //Chances of events
-    public const int kChanceMinorEvent = 40;
-    public const int kChanceMajorEvent = 20;
+    public const int kChanceMinorEvent = 50;
+    public const int kChanceMajorEvent = 40;
     public const int kChanceOfMoveRoom = 60;
     //intervals
     public const int kSmallInterval = 5;

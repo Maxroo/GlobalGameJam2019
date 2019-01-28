@@ -566,6 +566,7 @@ MonoBehaviour:
   clickingSFX: {fileID: 8300000, guid: 2d6eb3fce5786354085411d82fbbfb83, type: 3}
   positiveSFX: {fileID: 8300000, guid: 7d9f18b9543ef5d4d82f457aa2250f2f, type: 3}
   negativeSFX: {fileID: 8300000, guid: 13ebaf2d1ba1e6d489a63a5d9fb5f409, type: 3}
+  SFXclipID: 0
   audioSourceRef: {fileID: 1229885921}
   audioSFXRef: {fileID: 1229885920}
 --- !u!4 &1229885923
@@ -1118,7 +1119,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'It''s a Game, Maybe
+  m_Text: 'Weekend Normal
 
 '
 --- !u!222 &1743387489
