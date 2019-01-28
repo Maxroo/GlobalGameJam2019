@@ -62,9 +62,9 @@ public class GameClock : MonoBehaviour
     void Update()
     {
 
-		if (Input.GetKeyDown (KeyCode.Space)) {
-			GoToNextSegment ();
-		}
+		//if (Input.GetKeyDown (KeyCode.Space)) {
+		//	GoToNextSegment ();
+		//}
     }
 
     //--------------------------------------------------Public Methods--------------------------------------------------
@@ -196,6 +196,11 @@ public class GameClock : MonoBehaviour
         {
             isEnd = true;
             SceneManager.LoadSceneAsync("PlayerLeaves");
+        }
+        if (PlayerStatsManager.instance.energy <= 0)
+        {
+            isEnd = true;
+            SceneManager.LoadSceneAsync("PlayerPassOut");
         }
         if (currentTime >= (numberOfDays * 24))
         {
