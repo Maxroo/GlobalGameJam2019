@@ -25,6 +25,13 @@ public class EventAction : ScriptableObject
 
     }
 
+    public enum MusicChoices{
+        NEUTRAL,
+        POSITIVE,
+        NEGATIVE,
+        INTENSE
+    }
+
     public enum TimeRequirement{
 
         Morning,
@@ -34,7 +41,10 @@ public class EventAction : ScriptableObject
         Anytime
 
     }
+
     
+
+
     public TimeRequirement timeRequirement = TimeRequirement.Anytime;
     public DialogCanvasManager.CharactersToShow LeftCharacter;
     public DialogCanvasManager.CharactersToShow RightCharacter;
@@ -57,12 +67,21 @@ public class EventAction : ScriptableObject
 
 
     public bool isEnd;
+    public bool moveTime;
 
 
     public int familyStatAmount;
     public int playerStatAmount;
 
+    public bool loadEndingScene;
+
+    public BackgroundManager.RoomNames backgroundToLoad;
+
+    public bool changeMusic;
+    public MusicChoices musicToSet;
+
   
+    public string insertEndingScene;
 
 
     public static void CreateMyAsset()

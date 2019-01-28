@@ -10,6 +10,7 @@ public class DialogEvent : MonoBehaviour
     private bool spriteOutOnRight;
 
     bool isNextEnd;
+    bool isMoveTime;
 
     private DialogCanvasManager.CharactersToShow characterOnRight;
     private DialogCanvasManager.CharactersToShow characterOnLeft;
@@ -115,7 +116,17 @@ public class DialogEvent : MonoBehaviour
 
             isNextEnd = true;
             
+        }
+        if(currentAction.moveTime){
 
+            isMoveTime = true;
+
+        }
+
+        if(currentAction.insertEndingScene != null && currentAction.loadEndingScene){
+    
+            SceneManager.LoadScene(currentAction.insertEndingScene);
+    
         }
         
 
@@ -189,16 +200,18 @@ public class DialogEvent : MonoBehaviour
     }
 
     private void Update() {
-        if(Input.GetMouseButtonUp(0) && isNextEnd){
+        if(Input.GetMouseButtonDown(0) && isNextEnd){
 
-            GameClock.Instance.GoToNextSegment();
+            if(isMoveTime){
+                GameClock.Instance.GoToNextSegment();
+            }
             BackgroundManager.instance.isInRoom = false;
             BackgroundManager.instance.checkIsInRoom();
             HouseManager.instance.ShowHouse();
             RoomCanvasManager.instance.HideRoom();
             SceneManager.UnloadSceneAsync(gameObject.scene);
 
-        }else if(Input.GetMouseButtonUp(0) && actionNumber < eventArray.Length && !DialogCanvasManager.instance.isInChoice){
+        }else if(Input.GetMouseButtonDown(0) && actionNumber < eventArray.Length && !DialogCanvasManager.instance.isInChoice){
 
             actionNumber++;
             NextAction(actionNumber);
@@ -206,7 +219,13 @@ public class DialogEvent : MonoBehaviour
     }
 
     private void Start() {
+
         NextAction(0);
+        if(eventArray[0].backgroundToLoad != BackgroundManager.RoomNames.NONE){
+            BackgroundManager.instance.ShowRoomBackground(eventArray[0].backgroundToLoad);
+            HouseManager.instance.HideHouse();
+        }
+
     }
 
 

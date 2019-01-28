@@ -7,7 +7,7 @@ public class FamilyMember : MonoBehaviour
 {
 
     //Stats
-    [SerializeField] string characterName;
+    [SerializeField] FamilyCharacter character;
     [Range(0, 100)] [SerializeField] int mood = 50;
     [Range(0, 100)] [SerializeField] int loyalty = 50;
     [Range(0, 100)] [SerializeField] int relationship = 50;
@@ -44,6 +44,6 @@ public class FamilyMember : MonoBehaviour
     }
 
     private void Update() {
-        ChangeCHaracterStats(mood, loyalty, relationship);
+        ChangeCHaracterStats(character.mood, character.loyalty, character.relationship);
     }
 }

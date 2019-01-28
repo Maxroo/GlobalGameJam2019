@@ -200,7 +200,9 @@ public class DialogCanvasManager : MonoBehaviour
 
    public void HideCharacterLeft(){
        if(leftSprite != null){
+
             leftSprite.gameObject.GetComponent<SpriteMovement>().MoveOutLeft();
+           leftSprite= null;
        }
 
    }
@@ -209,6 +211,7 @@ public class DialogCanvasManager : MonoBehaviour
         if(rightSprite != null){
 
             rightSprite.gameObject.GetComponent<SpriteMovement>().MoveOutRight();
+            rightSprite = null;
         }
 
     }
