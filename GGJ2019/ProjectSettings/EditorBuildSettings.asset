@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Actions/cook.food.unity
     guid: fbe8b68e4973cc84da06356410a5389c
   - enabled: 1
+    path: Assets/Scenes/Credit.unity
+    guid: fb377ec09d4732a4c8d6533e2126a44c
+  - enabled: 1
     path: Assets/Scenes/Actions/look.at.photobooks.unity
     guid: 74446adb42bf3c246a272a0f364cd0cf
   - enabled: 1
@@ -29,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Actions/play.a.game.unity
     guid: 5dbbbd83212bfcf45ae6b1b1843e123f
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 265c3c2302b842441ab45a064dab79a5
   - enabled: 1
     path: Assets/Scenes/Actions/read.a.book.unity
     guid: af8e85456e1547841b32bd31add9f8b3

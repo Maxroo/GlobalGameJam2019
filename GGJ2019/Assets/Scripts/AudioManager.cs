@@ -7,13 +7,19 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     public static AudioManager instance;
 
-    AudioClip neutralMusic;
-    AudioClip possitiveMusic;
-    AudioClip negativeMusic;
-    AudioClip intenseMusic;
+    public AudioClip neutralMusic;
+    public AudioClip possitiveMusic;
+    public AudioClip negativeMusic;
 
-    
-    AudioSource audioSourceRef;
+    public AudioClip intenseMusic;
+
+    public AudioClip clickingSFX;
+    public AudioClip positiveSFX;
+    public AudioClip negativeSFX;
+
+    public int SFXclipID;
+    public AudioSource audioSourceRef;
+    public AudioSource audioSFXRef;
 
     private void Awake() {
 
@@ -22,6 +28,16 @@ public class AudioManager : MonoBehaviour
        }
        instance = this;
    }
+
+
+    /// <summary>
+    /// Start is called on the frame when a script is enabled just before
+    /// any of the Update methods is called the first time.
+    /// </summary>
+    void Start()
+    {
+        PlayNeutralMusic();
+    }
 
    public void PlayNeutralMusic(){
        if(audioSourceRef.clip != neutralMusic){
@@ -50,5 +66,19 @@ public class AudioManager : MonoBehaviour
            audioSourceRef.clip = intenseMusic;
            audioSourceRef.Play();
        }
+   }
+
+   public void PlayClickSoundEffect(){      
+       if(!audioSFXRef.isPlaying){
+        audioSFXRef.PlayOneShot(clickingSFX);
+       }
+   }
+    public void PlayPositiveSoundEffect(){      
+        audioSFXRef.PlayOneShot(positiveSFX);
+       }
+    
+   public void PlayNegativeSoundEffect(){      
+        audioSFXRef.PlayOneShot(negativeSFX);
+       
    }
 }

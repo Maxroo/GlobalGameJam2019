@@ -14,6 +14,7 @@ public class RoomOption : MonoBehaviour
     }
 
     public void OnPressAction(){
+        AudioManager.instance.PlayClickSoundEffect();
 
         string actionSceneId = RoomCanvasManager.instance.buttonText[buttonID].text.ToLower().Replace(' ', '.');
         SceneManager.LoadScene(actionSceneId, LoadSceneMode.Additive);

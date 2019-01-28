@@ -14,6 +14,7 @@ public class HouseRoom : MonoBehaviour
    }
 
    public void ButtonAction(){
+    AudioManager.instance.PlayClickSoundEffect();
        RoomCanvasManager.instance.ShowRoom(roomSceneName, roomActions, roomType);
 
    }

@@ -19,8 +19,14 @@ public class BackgroundManager : MonoBehaviour
     public static BackgroundManager instance;
 
     public Image houseOverview;
-    public Image outside;
+    public Image day;
+
+    
     public Image[] roomBackgrounds;
+
+    public Image night;
+    public Image nightChild;
+
     CanvasGroup backgroundsCanvas;
     Image currentBackground;
 
@@ -32,7 +38,8 @@ public class BackgroundManager : MonoBehaviour
             Destroy(this);
         }
         instance = this;
-
+        night.enabled = false;
+        nightChild.enabled = false;
         backgroundsCanvas = GetComponent<CanvasGroup>();
         checkIsInRoom();
     }
@@ -99,6 +106,19 @@ public class BackgroundManager : MonoBehaviour
         }else
         {
             houseOverview.enabled = false;            
+        }
+    }
+
+    public void timeChange(int hour)
+    {
+        if(hour == 8)
+        {
+            night.enabled = false;
+            nightChild.enabled = false;
+        }else if(hour == 20)
+        {
+            night.enabled = true;
+            nightChild.enabled = true;
         }
     }
 

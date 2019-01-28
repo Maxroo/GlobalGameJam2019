@@ -32,8 +32,6 @@ public class RoomCanvasManager : MonoBehaviour
             roomButtons[i].GetComponent<RoomOption>().buttonID = i;
 
         }
-
-        
         BackgroundManager.instance.ShowRoomBackground(roomType);
         backButton.gameObject.SetActive(true);
         HouseManager.instance.HideHouse();
@@ -67,6 +65,8 @@ public class RoomCanvasManager : MonoBehaviour
     }
 
     public void OnBackButtonClicked(){
+        AudioManager.instance.PlayClickSoundEffect();
+
         HouseManager.instance.ShowHouse();
         HideRoom();
         BackgroundManager.instance.isInRoom = false;

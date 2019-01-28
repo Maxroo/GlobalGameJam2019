@@ -128,6 +128,29 @@ public class DialogEvent : MonoBehaviour
             SceneManager.LoadScene(currentAction.insertEndingScene);
     
         }
+
+        if(currentAction.changeMusic == true)
+        {
+            switch(currentAction.musicToSet)
+            {
+                case EventAction.MusicChoices.INTENSE:
+                AudioManager.instance.PlayIntenseMusic();
+                break;
+                
+                case EventAction.MusicChoices.POSITIVE:
+                AudioManager.instance.PlayPositiveMusic();
+                break;
+
+                case EventAction.MusicChoices.NEGATIVE:
+                AudioManager.instance.PlayNegativeMusic();
+                break;
+
+                case EventAction.MusicChoices.NEUTRAL:
+                AudioManager.instance.PlayNeutralMusic();
+                break;
+            }
+
+        }
         
 
     }
@@ -201,7 +224,7 @@ public class DialogEvent : MonoBehaviour
 
     private void Update() {
         if(Input.GetMouseButtonDown(0) && isNextEnd){
-
+            AudioManager.instance.PlayClickSoundEffect();
             if(isMoveTime){
                 GameClock.Instance.GoToNextSegment();
             }
@@ -210,9 +233,9 @@ public class DialogEvent : MonoBehaviour
             HouseManager.instance.ShowHouse();
             RoomCanvasManager.instance.HideRoom();
             SceneManager.UnloadSceneAsync(gameObject.scene);
-
+            
         }else if(Input.GetMouseButtonDown(0) && actionNumber < eventArray.Length && !DialogCanvasManager.instance.isInChoice){
-
+            AudioManager.instance.PlayClickSoundEffect();
             actionNumber++;
             NextAction(actionNumber);
         }
